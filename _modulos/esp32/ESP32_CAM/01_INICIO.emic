@@ -1,0 +1,34 @@
+#setFile target.ino
+
+#include "esp_camera.h"
+#include "soc/soc.h"           // Disable brownour problems
+#include "soc/rtc_cntl_reg.h"  // Disable brownour problems
+#include "driver/rtc_io.h"
+#include <WiFi.h>
+#include <WiFiClient.h>   
+#include "ESP32_FTPClient.h"
+
+#include "NTPClient.h" //For request date and time
+#include <WiFiUdp.h>
+#include "time.h"
+
+#addToMacro(UC_FAMILY,esp32)
+
+
+camera_config_t config;
+
+
+
+//--------------Hardware Config---------------------
+#newRFIcode(_pcb\pcb.emic,pcb=esp32_cam.pcb)
+
+//------------- Driver Config -----------------------
+#newRFIcode(_api/Indicators/LEDs/led.emic)
+#newRFIcode(_api/Timer\Timer_API_V1.emic)
+#newRFIcode(_api/Camara/camara.emic)
+
+
+//-------------------- main -------------------------
+#newRFIcode(_main/esp32/arduino/main.emic)
+
+#unSetFile    

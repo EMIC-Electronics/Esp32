@@ -1,0 +1,13 @@
+#ifndef __streamIn_emic__
+#define __streamIn_emic__
+
+#setFile codigo.c
+    ##include(inc/streamIn.h)
+#unSetFile
+
+#setFile src.c
+    ##include(src/streamIn.c)
+#unSetFile
+
+
+#endif

@@ -1,0 +1,13 @@
+#ifndef __streamOut_emic__
+#define __streamOut_emic__
+
+#setFile codigo.c
+    ##include(inc/streamOut.h)
+#unSetFile
+
+// #setFile src.c
+//     ##include(src/streamOut.c)
+// #unSetFile
+
+
+#endif

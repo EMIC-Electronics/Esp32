@@ -1,0 +1,15 @@
+#setFile target.ino
+
+#addToMacro(UC_FAMILY,esp32)
+
+//--------------Hardware Config---------------------
+#newRFIcode(_pcb\pcb.emic,pcb=DOIT_ESP32_DEVKIT_V1)
+
+//------------- Driver Config -----------------------
+#newRFIcode(_api/Indicators/LEDs/led.emic)
+#newRFIcode(_api\Timer\Timer_API_V1.emic)
+
+//-------------------- main -------------------------
+#newRFIcode(_main/esp32/arduino/main.emic)
+
+#unSetFile    
