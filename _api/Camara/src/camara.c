@@ -40,7 +40,7 @@ void initCamera() {
 void takePhoto() {
 
       
-  camera_fb_t * fb = NULL;
+  //camera_fb_t * fb = NULL;
   
   
   // Take Picture with Camera

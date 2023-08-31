@@ -1,6 +1,6 @@
 
 
-
+camera_fb_t * fb = NULL;
 
 
 

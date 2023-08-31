@@ -4,12 +4,9 @@
 #include "soc/soc.h"           // Disable brownour problems
 #include "soc/rtc_cntl_reg.h"  // Disable brownour problems
 #include "driver/rtc_io.h"
-#include <WiFi.h>
-#include <WiFiClient.h>   
-#include "ESP32_FTPClient.h"
 
-#include "NTPClient.h" //For request date and time
-#include <WiFiUdp.h>
+
+
 #include "time.h"
 
 #addToMacro(UC_FAMILY,esp32)
@@ -26,6 +23,8 @@ camera_config_t config;
 #newRFIcode(_api/Indicators/LEDs/led.emic)
 #newRFIcode(_api/Timer\Timer_API_V1.emic)
 #newRFIcode(_api/Camara/camara.emic)
+#newRFIcode(_api/WiFi/wifi.emic)
+#newRFIcode(_api/FTP/ftp.emic)
 
 
 //-------------------- main -------------------------
