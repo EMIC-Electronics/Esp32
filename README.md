@@ -43,48 +43,6 @@ Respecto al firmware, podemos nombrar: comunicación SPI, I2C, Uart; Timers, sal
 
 
 
-### Funcionamiento.
-
-Como plataforma colaborativa, el propósito principal de EMIC es generar distintos tipos de documentos, como programas ejecutables por los módulos electrónicos, aplicaciones de teléfonos inteligentes o tablets y páginas webs.
-
-Los ingredientes necesarios para generar estas aplicaciones y documentos se dividen en dos clases:
-
-  1. El material creado por los usuarios expertos en distintas áreas del conocimiento. Dentro de esta categoría están incluidos archivos en distintos formato estándar. Por ejemplo:
-
-      * Código C (*.c)
-      * Header (*.h)
-      * Web (*.html, *.css, *.js)
-      * Latex (*.tex)
-      * Markdown (*.md)
-
-  Estos archivos van acompañados de metatexto y comandos que el sistema interpreta para saber como tratarlos.
-
-  2. El *script* creado por cualquier usuario (incluyendo a los expertos). Es *script* es creado utilizando el [editor EMIC](https://editor.emic-io) edición del tipo *drag&drop*  dentro de un entrono intuitivo. Donde además de código se puede editar páginas web de manera y pantallas gráficas de manera visual.
-  
-En otras palabras, en una aplicación EMIC se fusionan el conocimiento y la experiencia de desarrolladores e integradores y generan un resultado de alta calidad.
-
-
-![Diagrama de Funcionamiento](img/DiagramaFucionamientoEMIC.png)
-
-Vemos en el diagrama de funcionamiento, los distintos pasos para crear una aplicación web o un dispositivo electrónico.
-El sistema esta formado por cuatro procesos que transforman distintos  documentos de entrada en otros de salidas (EMIC Discovery, EMIC Transcriptor, EMIC Marge, EMIC Compiler), tres almacenes de documentos (SOURCE Documents, Intermediate Documents, y FINAL Documents) y un editor de Script.
-
-**EMIC Discovery:** este proceso es el encargado transformar los documentos alojado en *Source Documents* en información utilizada por el editor, es decir que genera una lista de recursos que luego pueden ser utilizados por quien edita el escript.
-
-**EMIC Transcriptor:** este proceso parte del script editado por el usuario y genera un documento que contiene la misma información pero en un formato diferente.
-
-**EMIC Merge:** partiendo del los documentos originales y del script transcripto, este proceso genera documentos que pertenecen a distinto formatos estándares como código C, latex, HTML, javascript, etc.
-
-**EMIC Compiler:** en caso que los documentos generados por EMIC marge necesiten ser compilados, este proceso se encarga de ejecutar al compilador que corresponde dependiendo del tipo de documento generado.
-
-**Intermediate Documents:** almacén donde residen los documentos generados por el transcriptor.
-
-**TARGET Documents:** acá se almacena el primer resultado útil,
-
-**SOURCE Documents:** es donde se almacenan los documentos creados por los desarrolladores del código fuente, este código va acompañado por información adicional, que describe el comportamiento dentro del sistema. Esta único lugar donde los usuarios ingresan documentos en forma directa y donde los desarrolladores compartimos código con el resto. Dada la importancia de esta carpeta se dedicará una sección para explicarla en detalle su estructura.
-
-
-
 ## Generación de Aplicaciones y documentos.
 
 En la etapa de integración, se crea el *script* mediante un proceso de edición utilizando la herramienta disponible en la web https://editor.emic.io. Es decir el sistema toma el documento creado en el proceso de edición del *script* y los transforma en código para un lenguaje de programación específico, como por ejemplo C, LaTex, Javascript  o HTML ( Tutorial edicion de *script* ).
@@ -98,6 +56,20 @@ Una vez que fueron seleccionados los módulos, comienza la edicion del *Script* 
 EL proceso de creación de drivers, bibliotecas y módulos que realiza un desarrollador experto es similar a la creación de aplicaciónes o documento de forma tradicional, donde se usa cualquier editor de texto. El desarrallodor crea los fragmentos de código que luego formará parte de la solución integrada, dentro de ese conjunto de bibliotecas estan las llamadas apis, que son las bibliotecas que se utilzan como conexión entre el *Script* y el código aportado por los desarrolladores.
 
 La única deferencia entre una api y las otras bibliotecas es que algunos fragmentos de código de las apis tienen asociado metatexto, es decir una descripción para que un proceso del sistema EMIC, llamado Discovery reconozca el metatexto para presentar la entrada a la librería como un recurso disponible para ser usado en el *Script* por el integrador.
+
+## Modulos.
+
+Los módulos EMIC son el elemento central del sistema, es para el desarrollador el objetivo final y para el integrador el comienzo. En decir que es la interface entre los dos mundos.
+Existen distintos tipos de módulos, los que representan a un hardware específico y sus capacidades o funciones, los que definen a una interface visual en la nube, los que definen una aplicación para teléfonos móviles o tablets y PC, y los que definen un proceso alojado en un servidor como bases de datos; procesos backends; e instancias modelos de inteligencia artificial.
+A si vez los módulos EMIC, estan compuestos por drivers, que son un grupo de funciones y características, podriamos decir que los módulos estan definidos por un conjunto de drivers, ademas de tener otros elementos que los describen.
+A continuacion de muestra un ejemplo de la definición de un módulos de harware con funciones de comunicación Bluetooth:
+
+
+![Ejempo de móulo EMIC](img/moduloEjemplo.png)
+
+en el ejemplo podemos observar la definición de un módulo 
+
+![Módulo Bluetooth](img/ModuloBT.png)
 
 
 
@@ -134,6 +106,46 @@ En estas carpetas hay código que si bien cumplen distintas funciones (en corres
 
 En esta carpeta se almacena la descripción de los recursos de mayor nivel llamdos módulos. Que a su vez están compuestos por otros recursos definidos en la carpeta _api
 
+
+### Funcionamiento.
+
+Como plataforma colaborativa, el propósito principal de EMIC es generar distintos tipos de documentos, como programas ejecutables por los módulos electrónicos, aplicaciones de teléfonos inteligentes o tablets y páginas webs.
+
+Los ingredientes necesarios para generar estas aplicaciones y documentos se dividen en dos clases:
+
+  1. El material creado por los usuarios expertos en distintas áreas del conocimiento. Dentro de esta categoría están incluidos archivos en distintos formato estándar. Por ejemplo:
+
+      * Código C (*.c)
+      * Header (*.h)
+      * Web (*.html, *.css, *.js)
+      * Latex (*.tex)
+      * Markdown (*.md)
+
+  Estos archivos van acompañados de metatexto y comandos que el sistema interpreta para saber como tratarlos.
+
+  2. El *script* creado por cualquier usuario (incluyendo a los expertos). La herramienta utilizada para esta tarea es el [editor EMIC](https://editor.emic-io) edición del tipo *drag&drop*  dentro de un entorno intuitivo. Donde además de código se pueden editar páginas web de manera y pantallas gráficas de manera visual.
+  
+En otras palabras, en una aplicación EMIC se fusionan el conocimiento y la experiencia de desarrolladores e integradores y generan un resultado de alta calidad.
+
+
+![Diagrama de Funcionamiento](img/DiagramaFucionamientoEMIC.png)
+
+Vemos en el diagrama de funcionamiento, los distintos pasos para crear una aplicación web o un dispositivo electrónico.
+El sistema esta formado por cuatro procesos que transforman distintos  documentos de entrada en otros de salidas (EMIC Discovery, EMIC Transcriptor, EMIC Marge, EMIC Compiler), tres almacenes de documentos (SOURCE Documents, Intermediate Documents, y FINAL Documents) y un editor de Script.
+
+**EMIC Discovery:** este proceso es el encargado transformar los documentos alojado en *Source Documents* en información utilizada por el editor, es decir que genera una lista de recursos que luego pueden ser utilizados por quien edita el escript.
+
+**EMIC Transcriptor:** este proceso parte del script editado por el usuario y genera un documento que contiene la misma información pero en un formato diferente.
+
+**EMIC Merge:** partiendo del los documentos originales y del script transcripto, este proceso genera documentos que pertenecen a distinto formatos estándares como código C, latex, HTML, javascript, etc.
+
+**EMIC Compiler:** en caso que los documentos generados por EMIC marge necesiten ser compilados, este proceso se encarga de ejecutar al compilador que corresponde dependiendo del tipo de documento generado.
+
+**Intermediate Documents:** almacén donde residen los documentos generados por el transcriptor.
+
+**TARGET Documents:** acá se almacena el primer resultado útil,
+
+**SOURCE Documents:** es donde se almacenan los documentos creados por los desarrolladores del código fuente, este código va acompañado por información adicional, que describe el comportamiento dentro del sistema. Esta único lugar donde los usuarios ingresan documentos en forma directa y donde los desarrolladores compartimos código con el resto. Dada la importancia de esta carpeta se dedicará una sección para explicarla en detalle su estructura.
 
 
 
