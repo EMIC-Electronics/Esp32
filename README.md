@@ -65,11 +65,19 @@ A si vez los módulos EMIC, estan compuestos por drivers, que son un grupo de fu
 A continuacion de muestra un ejemplo de la definición de un módulos de harware con funciones de comunicación Bluetooth:
 
 
-![Ejempo de móulo EMIC](img/moduloEjemplo.png)
+<div style="display: flex;">
+  <div style="flex: 50%; padding: 10px;">
+    <img src="img/ModuloBT.png" alt="Gráfico 1">
+  </div>
+  <div style="flex: 50%; padding: 10px;">
+    <img src="img/moduloEjemplo.png" alt="Gráfico 1">
+  </div>
+</div>
 
-en el ejemplo podemos observar la definición de un módulo 
+En la definicion se pueden observar en la linea 1 la definición del nombre del módulo, en la linea 2 se define una macro que hace referencia al micronotrolador utilizado, luego continua el comando **_#insertFile_(_pcb\pcb.emic,pcb=HRD_BLUETOOTH_V1.0)**
 
-![Módulo Bluetooth](img/ModuloBT.png)
+Linea
+
 
 
 
