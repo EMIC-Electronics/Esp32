@@ -74,9 +74,23 @@ A continuacion de muestra un ejemplo de la definición de un módulos de harware
   </div>
 </div>
 
-En la definicion se pueden observar en la linea 1 la definición del nombre del módulo, en la linea 2 se define una macro que hace referencia al micronotrolador utilizado, luego continua el comando **_#insertFile_(_pcb\pcb.emic,pcb=HRD_BLUETOOTH_V1.0)**
+El documento que define el módulo  se pueden observar las lineas con comandos EMIC CODIFY 
+   
+  Linea 1.  **#addToMacro(UC_FAMILY,pic24fj64ga002)** crea una macro llamada UC_FAMILY y le asigna el valor pic24fj64ga002.
+   
+  Linea  4.  **#insertFile(_pcb\pcb.emic,pcb=HRD_BLUETOOTH_V1.0)** inserta el archivo *"pcb.emic"* ubicado en la carpeta *"_pcb"* y le pasa un parametro llamado *"pcb"* con el valor *"HRD_BLUETOOTH_V1"*, en ese archivo está la definición de la placa con la asignación de los pines del microprocesador y la configuración del hardware.
 
-Linea
+  Linea 8. **#insertFile(_api\Indicators\LEDs\led.emic)** inserta el archivo con las funciones relacinadas a los Leds
+
+  Linea 9. **#insertFile(_api\Timer\Timer_API_V1.emic)**  inserta el archivo con las funciones relacinadas a los Temporizadores
+
+  Linea 10. **#insertFile(_api\Bluetooth\Bluetooth_v1.0.0.emic,puerto=1,nombre=,baud=38400,bufferIn=512,bufferOut=512,frameLf='\n')**  inserta el archivo con las funciones relacinadas al manejo de la comunicación Bluetooth, pansandole los parametros de configuración.
+
+  Linea 11. **#insertFile(_api\EMICbus\emicBus.emic)** inserta el archivo con las funciones relacinadas a los Bus EMIC, que permite la comunicación con otros módulos de hardware vecinos.
+
+  Linea 12. **#insertFile(_api\System\System.emic)** inserta el archivo con las funciones relacinadas al sistema.
+
+  Linea 16. **#insertFile(_main/baremetal/main.emic)**  inserta el archivo con las funcion main, necesaria para el 
 
 
 
