@@ -3,7 +3,6 @@ void initFTP()
       ftp.OpenConnection();
 }
 
-
 void ftpUploadImage()
 {
 

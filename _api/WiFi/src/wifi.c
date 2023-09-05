@@ -2,8 +2,11 @@ void initWiFi() {
 
   WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0); //disable brownout detector
  
-  Serial.begin(115200);
+  Serial.begin(115200);  
+}
 
+void Wifi_connect()
+{
   WiFi.begin(WIFI_SSID, WIFI_PASS);
   
   Serial.println("Connecting Wifi...");
