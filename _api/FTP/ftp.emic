@@ -27,7 +27,6 @@
 }
 */
 
-
 /**
 * @fn void ftpUploadImage(void);
 * @alias UploadImage

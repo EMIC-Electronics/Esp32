@@ -5,7 +5,7 @@ void initWiFi() {
   Serial.begin(115200);  
 }
 
-void Wifi_connect()
+void WiFi_connect()
 {
   WiFi.begin(WIFI_SSID, WIFI_PASS);
   

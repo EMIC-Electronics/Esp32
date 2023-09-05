@@ -14,8 +14,6 @@
 
 camera_config_t config;
 
-
-
 //--------------Hardware Config---------------------
 #newRFIcode(_pcb\pcb.emic,pcb=esp32_cam.pcb)
 
