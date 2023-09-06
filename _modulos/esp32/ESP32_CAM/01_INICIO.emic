@@ -23,7 +23,7 @@ camera_config_t config;
 #newRFIcode(_api/Camara/camara.emic)
 #newRFIcode(_api/WiFi/wifi.emic)
 #newRFIcode(_api/FTP/ftp.emic)
-
+#newRFIcode(_api/WebServer/webServer.emic)
 
 //-------------------- main -------------------------
 #newRFIcode(_main/esp32/arduino/main.emic)

@@ -1,0 +1,20 @@
+#ifndef __WEBSERVER_EMIC__
+#define __WEBSERVER_EMIC__
+//RFI TAG:driverName=HTTP Web Server
+
+/**
+* @fn void HTTPUploadImage(void);
+* @alias UploadImage
+* @brief Takes the last photo taken from ESPCam and sends it to the specified URL.
+* @return Nothing
+*/
+
+#setFile target.ino
+	##include(inc/webServer.h)
+#unSetFile
+
+#setFile src.c
+	##include(src/webServer.c|src/webServer.c.h)
+#unSetFile
+
+#endif

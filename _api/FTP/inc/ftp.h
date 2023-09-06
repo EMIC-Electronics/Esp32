@@ -6,8 +6,8 @@
 #include "time.h"
 
 ESP32_FTPClient ftp(.{ftp_server}., .{ftp_user}., .{ftp_pass}.);
-UDP *udp_conn;
-NTPClient timeClient(*udp_conn);
+WiFiUDP udp_conn;
+NTPClient FTP_timeClient(udp_conn);
 
 char ftp_path []  = "/";                /**< FTP path.  */
 

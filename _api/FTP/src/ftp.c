@@ -15,7 +15,7 @@ void ftpUploadImage()
   ftp.ChangeWorkDir(ftp_path);
   ftp.InitFile("Type I");
 
-  String nombreArchivo = timeClient.getFullFormattedTimeForFile()+".jpg"; // AAAAMMDD_HHMMSS.jpg
+  String nombreArchivo = FTP_timeClient.getFullFormattedTimeForFile()+".jpg"; // AAAAMMDD_HHMMSS.jpg
   //String nombreArchivo = "x123.jpg"; // AAAAMMDD_HHMMSS.jpg  
   Serial.println("Subiendo "+nombreArchivo);
   int str_len = nombreArchivo.length() + 1; 
