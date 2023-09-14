@@ -12,10 +12,13 @@ void WiFi_connect()
   Serial.println("Connecting Wifi...");
   while (WiFi.status() != WL_CONNECTED) {
       delay(500);
-      Serial.println("Connecting to WiFi..");
-      
+      Serial.println("Connecting to WiFi..");   
   }
   Serial.println("IP address: ");
       
   Serial.println(WiFi.localIP());
+
+  //initFTP();
+  HTTPInit();
+  
 }

@@ -12,9 +12,6 @@ NTPClient HTTP_timeClient(ntpUDP);
 char HTTP_URL[] = "https://6mrlm5o8fa.execute-api.us-east-1.amazonaws.com/Prod/classify_digit"; /**< URL where the photo will be uploaded. */
 
 void HTTPInit(void);
-#setFile temp/EMICinits.c
-    void HTTPInit();
-#unSetFile
 
 void HTTPUploadImage();
 

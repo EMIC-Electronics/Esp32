@@ -12,7 +12,3 @@ NTPClient FTP_timeClient(udp_conn);
 char ftp_path []  = "/";                /**< FTP path.  */
 
 void initFTP(void);
-
-#setFile temp/EMICinits.c
-	initFTP();
-#unSetFile

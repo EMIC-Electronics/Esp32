@@ -11,7 +11,9 @@ void HTTPUploadImage(void)
 {
     http.begin(HTTP_URL);
     http.addHeader("Content-Type", "image/jpeg");
+    http.addHeader("topic", "usrr/prroj");
     http.sendRequest("POST", fb->buf, fb->len);
+    Serial.println(http.getString());
     http.end();
     esp_camera_fb_return(fb);
 }
