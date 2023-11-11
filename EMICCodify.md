@@ -21,7 +21,7 @@ El script resultante es dirigido a otro subproceso del sistema, que invoca al c�
 
 ### EMIC Codify.
 
-Cuando el sistema EMIC fuciona el script con las distintas librerías que integran la solución, lo hace siguiendo indicaciónes proporcinadas por los desarroladores.
+Cuando el sistema EMIC fuciona el script con las distintas librerías que integran la solución, lo hace siguiendo indicaciónes proporcinadas por los desarrolladores.
 
 Estas indicaciones se hacen utilizando comandos en un lenguaje de programción desarrollado especialmente para el manejo de documentos de texto y código llamado EMIC Codify.
 
