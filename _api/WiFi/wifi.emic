@@ -1,9 +1,9 @@
 //RFI TAG:driverName=WiFi
 
 /**
-* @fn void connect(void);
-* @alias connect
-* @brief Change the state of the led, 1-on, 0-off, 2-toggle
+* @fn void WiFi_connect(void);
+* @alias Connect
+* @brief Connect to the specified WiFi network
 * @return Nothing
 */
 

@@ -10,6 +10,8 @@ char WIFI_PASS[32];		/**< AP Password.  */
 
 void initWiFi(void);
 
+void WiFi_connect();	//Connect method.
+
 #setFile temp/EMICinits.c
 	initWiFi();
 #unSetFile

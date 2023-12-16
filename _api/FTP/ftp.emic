@@ -1,5 +1,32 @@
 //RFI TAG:driverName=FTP
 
+/*RFI JSon
+{
+	'Nombre': 'ftp_server',
+	'Tipo' : 'ConfigDynamic',
+	'title': 'FTP Server address',
+	"InnerHTML":"<div><label>FTP Server address:</label><input type='text' required name='ftp_server' value='192.168.0.57'></div>"
+}
+*/
+
+/*RFI JSon
+{
+	'Nombre': 'ftp_user',
+	'Tipo' : 'ConfigDynamic',
+	'title': 'FTP Server user',
+	"InnerHTML":"<div><label>FTP Server user:</label><input type='text' required name='ftp_user' value='anonymous'></div>"
+}
+*/
+
+/*RFI JSon
+{
+	'Nombre': 'ftp_pass',
+	'Tipo' : 'ConfigDynamic',
+	'title': 'FTP Server pass',
+	"InnerHTML":"<div><label>FTP Server pass:</label><input type='password' required name='ftp_pass' value=''></div>"
+}
+*/
+
 /**
 * @fn void ftpUploadImage(void);
 * @alias UploadImage

@@ -3,7 +3,7 @@
 /**
 * @fn void takePhoto(void);
 * @alias takePhoto
-* @brief Change the state of the led, 1-on, 0-off, 2-toggle
+* @brief Take a photo from ESPCam.
 * @return Nothing
 */
 
