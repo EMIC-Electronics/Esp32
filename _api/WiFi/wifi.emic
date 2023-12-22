@@ -1,0 +1,16 @@
+//RFI TAG:driverName=WiFi
+
+/**
+* @fn void WiFi_connect(void);
+* @alias Connect
+* @brief Connect to the specified WiFi network
+* @return Nothing
+*/
+
+#setFile target.ino
+	##include(inc/wifi.h)
+#unSetFile
+
+#setFile src.c
+	##include(src/wifi.c|src/wifi.c.h)
+#unSetFile

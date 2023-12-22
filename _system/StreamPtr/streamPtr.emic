@@ -1,0 +1,17 @@
+#ifndef _STREAM_EMIC
+#define _STREAM_EMIC
+
+
+// #newRFIcode(_system/Stream/streamIn.emic)
+// #newRFIcode(_system/Stream/streamOut.emic)
+
+
+#setFile codigo.c
+    ##include(inc/streamPtr.h)
+#unSetFile
+
+#setFile src.c
+    ##include(src/streamPtr.c)
+#unSetFile
+
+#endif

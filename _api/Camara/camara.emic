@@ -1,0 +1,16 @@
+//RFI TAG:driverName=CAMARA
+
+/**
+* @fn void takePhoto(void);
+* @alias takePhoto
+* @brief Take a photo from ESPCam.
+* @return Nothing
+*/
+
+#setFile target.ino
+	##include(inc\camara.h)
+#unSetFile
+
+#setFile src.c
+	##include(src\camara.c|src\camara.c.h)
+#unSetFile
