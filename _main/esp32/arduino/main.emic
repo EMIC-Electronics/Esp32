@@ -1,0 +1,42 @@
+// Definir que hace
+
+//RFI TAG:driverName=SYSTEM
+
+/*xRFI JSon
+{
+	'Nombre': 'onReset',
+	'NombreToolBox': 'onReset',
+	'Tipo' : 'SistemEvt',
+	'title': 'When the module and all its functions are ready',
+	'ReturnInfo': {'type':'','tooltip':'nothing'},
+	'parameters': [],
+	'instancia':'{
+		"NombreWorkBox": "Event.SYSTEM.onReset",
+		"definir":"event_OnReset_active",
+		"parametros": []
+		}'
+}
+*/
+
+
+/**
+* @fn extern void onReset(void);
+* @alias onReset
+* @brief When the module and all its functions are ready
+* @return Nothing
+*/
+
+
+
+// #include <stdint.h>
+// #include <string.h>
+// #include <stdlib.h>
+// #include <math.h>
+
+// #newRFIcode(_system\systemInclusions.emic)
+
+
+
+#setFile target.ino
+    #newRFIcode(main.c)
+#unSetFile    

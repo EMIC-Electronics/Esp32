@@ -1,0 +1,12 @@
+#ifndef _TIMER_EMIC_
+#define _TIMER_EMIC_
+
+#setFile target.ino
+##include(inc\timer.h)
+#unSetFile
+
+#setFile src.c.h
+##include(src\timer.c|src\timer.c.h)
+#unSetFile
+
+#endif
