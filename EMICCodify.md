@@ -27,12 +27,125 @@ Estas indicaciones se hacen utilizando comandos en un lenguaje de programción d
 
 Utilizando EMIC Codify se establece la relación entre la definición de los módulos EMIC y sus dependencias, así como las dependencias de cada archivo dentro de una bibliteca o driver. Además el lenguaje permite moldear a cada librería dentro de un proyecto específico, es decir que los archivos pueden tomar distintas formas, adaptendose automáticamente a la necesidad de cada solución.
 
-#### Comados EMIC Codify:
+### Comados EMIC Codify:
 
-##### #insertFile(dir/file[,paramn=valuen][, ......])
+#### #insertFile(**dir**/**file**[,param=value][, ......])
+
+Procesa el archivo llamado **file** ubicado en el directorio **dir**, el orden de búsqueda es el siguiente:
+
+Salida
+
+target
+
+/DEV
+
+/USER
+
+
+#### #newRFIcode(dir/file[,param=value][, ......])
+##### #setFile dir/file
+##### #reSetFile dir/file
+##### #unSetFile
+##### #define
+##### #undef
+##### #copy
+##### ##include
+##### #addToMacro
+##### -{  }-
+##### _{  }_
+##### .{  }.
+##### //No RFI scan   
+##### #else
+##### #ifdef
+##### #ifndef
+##### #elif
+##### 
+##### #if
+##### #endif
+##### 
+##### #aplyUsingDriver
+
+
+
+  
+#addToList
+#using
+#useDriver
+#include
+doCMDejec
+doCMDf
+doCMD
+doInit
+doPoll
+doStream
+/**<   */
+/*RFI ModuloReferencia
+//RFI TAG:driverName=
+/*RFI
+
+
+-------------------------------------------------------------
+
+
+
+### Comandos EMIC Codify:
+
+#### EMIC:setInput([**origin**:][**dir**/]**file**[,**key**=**value**][, ......])
+
+Procesa el archivo llamado **file** ubicado en el directorio **dir**, a ubicado en **origin**. Ademas se crea un diccionario temporal con un conjunto de claves y 
+
+#### EMIC:setOutput([**target**:][**dir**/]**file**)
+
+Redirige la salida al archivo llamado **file** ubicado en el directorio **dir**, a ubicado en **origin**.
+
+#### EMIC:reSetOutput
+
+Redirige la salida al destino anterior.
+
+#### EMIC:define([**group**.]**key**,**value**)
+
+Define una nueva entrada al diccionario con el nombre **key** y cuyo valor sera **value**, en el caso que la clave este precedida por el nombre de un grupo, asigna la entrada al grupo, si el grupo no existe lo crea.
+
+#### EMIC:unDefine(**key**)
+
+Borra la entrada con el nombre **key** del diccionario.
+
+#### .{**key**}.
+
+Reemplaza .{**key**}. por el valor asignado con EMIC:define([**group**.]**key**,**value**).
+
+### EMIC:foreach(**group**)    .{Item}.     EMIC:endfor
+
+
+
+#### EMIC:copy([**origin**:][**dir**/]**file**,[**target**:][**dir**/]**file**)
+
+Copia el contenido del documento ubicado en [**origin**:][**dir**/]**file**, en [**target**:][**dir**/]**file**.
+
+#### .{**key**}.
+
+#### EMIC:if
+#### EMIC:elif
+#### EMIC:ifdef
+#### EMIC:ifndef
+#### EMIC:else
+#### EMIC:endif
 
 
 
 
-
-
+  
+#addToList
+#using
+#useDriver
+#include
+doCMDejec
+doCMDf
+doCMD
+doInit
+doPoll
+doStream
+/**<   */
+/*RFI ModuloReferencia
+//RFI TAG:driverName=
+/*RFI

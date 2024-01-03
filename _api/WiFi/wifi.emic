@@ -11,6 +11,6 @@
 	##include(inc/wifi.h)
 #unSetFile
 
-#setFile src.c
-	##include(src/wifi.c|src/wifi.c.h)
+#setFile wifi.c
+	##include(src/wifi.c)
 #unSetFile
