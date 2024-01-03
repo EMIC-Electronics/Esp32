@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+// @rrpalmav -- pregntar cada uno de las parametrizaciones
+// @rrpalmav -- estas son parametrizaciones
+=======
+>>>>>>> 2f279fd76599a4d6bd29a26d8292313d97fca4d0
 #setFile target.ino
 
 #addToMacro(UC_FAMILY,esp32)

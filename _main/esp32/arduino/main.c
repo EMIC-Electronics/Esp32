@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+// Archivo Fuente Principal: Aqui empezara a generar el fuente
+
+=======
+>>>>>>> 2f279fd76599a4d6bd29a26d8292313d97fca4d0
 #include "userFncFile.h"  //No RFI scan
 #include "inc/userVars.h"  //No RFI scan
 #include "src.c.h"  //No RFI scan
@@ -9,9 +14,14 @@
 
 void setup() {
   
+<<<<<<< HEAD
+  // initialize digital pin LED_BUILTIN as an output.
+  //pinMode(LED_BUILTIN, OUTPUT);
+=======
 	#ifdef event_preInit_active
 	preInit();
 	#endif
+>>>>>>> 2f279fd76599a4d6bd29a26d8292313d97fca4d0
 
 	initSystem();
 	#newRFIcode(temp/EMICinits.c.h)

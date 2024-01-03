@@ -1,13 +1,7 @@
 {
-<<<<<<< HEAD
-"type":"ESP32",
-"toolTip":"Microcontrolador ESP32",
-"description":"Tarjeta de microcontrolador ESP32, cuenta con conectividad Wi-Fi y Bluetooth, ofrece pines digitales, ADC, DAC y varios buses de conectividad alambrica. Es una placa amigable y fácil de usar",
-=======
 "type":"arduino",
 "toolTip":"Communication with USB port",
 "description":"Communication module with USB port. It is used to connect the created device to a Host PC and it has a direct connection to the EMIC bus.",
->>>>>>> 2f279fd76599a4d6bd29a26d8292313d97fca4d0
 "Sizes":"TBD",
 "ImageFile":"blz1.gif",
 "IconFile":"TBD",
@@ -62,22 +56,6 @@
 "Simulation":"DRN1285.dll",
 "features":[
 				"Emic bus compatible.",
-<<<<<<< HEAD
-				"Size: 5.44x2.79cm",
-				"Mounting type Holder Riel DIN.",
-				"Temperature range -55�C a 125�C.",
-				],
-"applications":["Data logger.",
-				"IoT.",
-				"Debugging.",
-				"WebServer.",
-				],
-"keyWord":[
-			"IOT",
-			"Microcontroller",
-			"Bluetooth",
-			"Wifi - 802.11 b/g/n",
-=======
 				"Size:7x2cm",
 				"Mounting type Holder Riel DIN.",
 				"Temperature range -25�C a 80�C.",
@@ -91,7 +69,6 @@
 			"gas",
 			"CO",
 			"NOx",
->>>>>>> 2f279fd76599a4d6bd29a26d8292313d97fca4d0
 			"industrial"
 			]
 }
