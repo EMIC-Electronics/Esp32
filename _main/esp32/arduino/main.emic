@@ -1,7 +1,5 @@
 //RFI TAG:driverName=SYSTEM
 
-
-
 /**
 * @fn extern void preInit(void);
 * @alias preReset
@@ -24,10 +22,10 @@
 // #include <stdlib.h>
 // #include <math.h>
 
-// #newRFIcode(_system\systemInclusions.emic)
+// EMIC:setInput(SYS:_system\systemInclusions.emic)
 
 
 
-#setFile target.ino
-    #newRFIcode(main.c)
-#unSetFile    
+EMIC:setOutput(TARGET:target.ino)
+    EMIC:setInput(main.c)
+EMIC:restoreOutput   

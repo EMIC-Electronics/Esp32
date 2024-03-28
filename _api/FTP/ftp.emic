@@ -34,10 +34,10 @@
 * @return Nothing
 */
 
-#setFile target.ino
+EMIC:setOutput(TARGET:target.ino)
 	##include(inc/ftp.h)
-#unSetFile
+EMIC:restoreOutput
 
-#setFile src.c
+EMIC:setOutput(TARGET:src.c)
 	##include(src/ftp.c|src/ftp.c.h)
-#unSetFile
+EMIC:restoreOutput

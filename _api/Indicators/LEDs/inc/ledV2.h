@@ -1,7 +1,5 @@
 void init_led (void);
-#setFile temp/EMICinits.c
-	init_led();
-#unSetFile
+EMIC:define(inits.init_led,init_led)
 
 
 typedef enum
@@ -11,44 +9,42 @@ typedef enum
 	LED_STATUS_TOGGLE
 } led_status_t;
 
-#ifdef use_led1_function
+EMIC:ifdef usedFuncion.led1
 void led1(led_status_t);
-#endif
+EMIC:endif
 
-#ifdef use_blkLed1_function
+EMIC:ifdef usedFuncion.blkLed1
 void blkLed1(uint16_t, uint16_t, uint16_t);
-#endif
+EMIC:endif
 
-#ifdef use_led2_function
+EMIC:ifdef usedFuncion.led2
 void led2(led_status_t);
-#endif
+EMIC:endif
 
-#ifdef use_blkLed2_function
+EMIC:ifdef usedFuncion.blkLed2
 void blkLed2(uint16_t, uint16_t, uint16_t);
-#endif
+EMIC:endif
 
-#ifdef use_LED3_function
+EMIC:ifdef usedFuncion.LED3
 void led3(led_status_t);
-#endif
+EMIC:endif
 
-#ifdef use_blkLed3_function
+EMIC:ifdef usedFuncion.blkLed3
 void blkLed3(uint16_t, uint16_t, uint16_t);
-#endif
+EMIC:endif
 
-#ifdef use_LED4_function
+EMIC:ifdef usedFuncion.LED4
 void led4(led_status_t);
-#endif
+EMIC:endif
 
-#ifdef use_blkLed4_function
+EMIC:ifdef usedFuncion.blkLed4
 void blkLed4(uint16_t, uint16_t, uint16_t);
-#endif
+EMIC:endif
 
-#ifdef use_pullLeds_function
+EMIC:ifdef usedFuncion.pullLeds
 void Poll_LEDs();
 
-#setFile temp/EMICpolling.c
-	Poll_LEDs();
-#unSetFile
+EMIC:define(polls.Poll_LEDs,Poll_LEDs)
 
-#endif
+EMIC:endif
 

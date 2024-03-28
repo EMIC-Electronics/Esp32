@@ -1,9 +1,9 @@
 
-#setFile codigo.c
-    #newRFIcode(inc\includesLibraries.h)
+EMIC:setOutput(TARGET:codigo.c)
+    EMIC:setInput(inc\includesLibraries.h)
     ##include(inc\conversionFunctions.h)
-#unSetFile
+EMIC:restoreOutput
 
-#setFile src.c
+EMIC:setOutput(TARGET:src.c)
     ##include(src\conversionFunctions.c)
-#unSetFile
+EMIC:restoreOutput

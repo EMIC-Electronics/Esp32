@@ -1,23 +1,23 @@
 void init_led (void)
 {
 	//gpio_init();
-#ifdef PIN_Led1
+EMIC:ifdef PIN_Led1
 	HAL_GPIO_PinCfg(Led1, GPIO_OUTPUT);
-#endif
-#ifdef PIN_Led2
+EMIC:endif
+EMIC:ifdef PIN_Led2
 	HAL_GPIO_PinCfg(Led2, GPIO_OUTPUT);
-#endif
-#ifdef PIN_Led3
+EMIC:endif
+EMIC:ifdef PIN_Led3
 	HAL_GPIO_PinCfg(Led3, GPIO_OUTPUT);
-#endif
-#ifdef PIN_Led4
+EMIC:endif
+EMIC:ifdef PIN_Led4
 	HAL_GPIO_PinCfg(Led4, GPIO_OUTPUT);
-#endif
+EMIC:endif
 }
 
 
 
-#ifdef use_led1_function
+EMIC:ifdef usedFuncion.led1
 void led1(int status)
 {
 	switch (status)
@@ -40,9 +40,9 @@ void led1(int status)
 	}
 }
 doCMDf(led1)
-#endif
+EMIC:endif
 
-#ifdef use_led2_function
+EMIC:ifdef usedFuncion.led2
 void led2(led_status_t status)
 {
 	switch (status)
@@ -65,9 +65,9 @@ void led2(led_status_t status)
 	}
 }
 doCMDf(led2)
-#endif
+EMIC:endif
 
-#ifdef use_LED3_function
+EMIC:ifdef usedFuncion.LED3
 void led3(led_status_t status)
 {
 	switch (status)
@@ -90,9 +90,9 @@ void led3(led_status_t status)
 	}
 }
 doCMDf(led3)
-#endif
+EMIC:endif
 
-#ifdef use_LED4_function
+EMIC:ifdef usedFuncion.LED4
 void led4(led_status_t status)
 {
 	switch (status)
@@ -116,11 +116,11 @@ void led4(led_status_t status)
 }
 
 doCMDf(led4)
-#endif
+EMIC:endif
 
 
 
-#ifdef use_blkLed1_function
+EMIC:ifdef usedFuncion.blkLed1
 uint16_t blkLed1_timerOn = 0; 
 uint16_t blkLed1_period = 0; 
 uint16_t blkLed1_times = 0; 
@@ -135,11 +135,11 @@ void blkLed1(uint16_t timeOn, uint16_t period, uint16_t times)
 	blkLed1_tStamp = timeStamp;
 }
 doCMDf(blkLed1)
-#endif
+EMIC:endif
 
 
 
-#ifdef use_blkLed2_function
+EMIC:ifdef usedFuncion.blkLed2
 
 uint16_t blkLed2_timerOn = 0; 
 uint16_t blkLed2_period = 0; 
@@ -155,9 +155,9 @@ void blkLed2(uint16_t timeOn, uint16_t period, uint16_t times)
 	blkLed2_tStamp = timeStamp;
 }
 doCMDf(blkLed2)
-#endif
+EMIC:endif
 
-#ifdef use_blkLed3_function
+EMIC:ifdef usedFuncion.blkLed3
 uint16_t blkLed3_timerOn = 0; 
 uint16_t blkLed3_period = 0; 
 uint16_t blkLed3_times = 0; 
@@ -172,9 +172,9 @@ void blkLed3(uint16_t timeOn, uint16_t period, uint16_t times)
 	blkLed3_tStamp = timeStamp;
 }
 doCMDf(blkLed3)
-#endif
+EMIC:endif
 
-#ifdef use_blkLed4_function
+EMIC:ifdef usedFuncion.blkLed4
 uint16_t blkLed4_timerOn = 0; 
 uint16_t blkLed4_period = 0; 
 uint16_t blkLed4_times = 0; 
@@ -189,13 +189,13 @@ void blkLed4(uint16_t timeOn, uint16_t period, uint16_t times)
 	blkLed4_tStamp = timeStamp;
 }
 doCMDf(blkLed4)
-#endif
+EMIC:endif
 
 
-#ifdef use_pullLeds_function
+EMIC:ifdef usedFuncion.pullLeds
 void Poll_LEDs()
 {
-#ifdef use_blkLed1_function
+EMIC:ifdef usedFuncion.blkLed1
 	if (blkLed1_period > 0)
 	{
 		if (blkLed1_tStamp + blkLed1_period < timeStamp)
@@ -221,10 +221,10 @@ void Poll_LEDs()
 
 	}
 
-#endif	
+EMIC:endif	
 
 
-#ifdef use_blkLed2_function
+EMIC:ifdef usedFuncion.blkLed2
 	if (blkLed2_period > 0)
 	{
 		if (blkLed2_tStamp + blkLed2_period < timeStamp)
@@ -250,9 +250,9 @@ void Poll_LEDs()
 
 	}
 
-#endif
+EMIC:endif
 
-#ifdef use_blkLed3_function
+EMIC:ifdef usedFuncion.blkLed3
 	if (blkLed3_period > 0)
 	{
 		if (blkLed3_tStamp + blkLed3_period < timeStamp)
@@ -278,9 +278,9 @@ void Poll_LEDs()
 
 	}
 
-#endif
+EMIC:endif
 
-#ifdef use_blkLed4_function
+EMIC:ifdef usedFuncion.blkLed4
 	if (blkLed4_period > 0)
 	{
 		if (blkLed4_tStamp + blkLed4_period < timeStamp)
@@ -306,8 +306,8 @@ void Poll_LEDs()
 
 	}
 
-#endif	
+EMIC:endif	
 	
 }
 
-#endif
+EMIC:endif

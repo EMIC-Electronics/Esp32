@@ -3,21 +3,21 @@
 #include "src.c.h"  //No RFI scan
 #include "userFncFile.c.h"  //No RFI scan
 
-#newRFIcode(_hal/.{UC_FAMILY}./system/init.emic)
+EMIC:setInput(SYS:_hal/.{UC_FAMILY}./system/init.emic)
 
 
 
 void setup() {
   
-	#ifdef event_preInit_active
+	EMIC:ifdef usedEvent.preInit
 	preInit();
-	#endif
+	EMIC:endif
 
 	initSystem();
-	#newRFIcode(temp/EMICinits.c.h)
-	#ifdef event_onReset_active
+	EMIC:setInput(temp/EMICinits.c.h)
+	EMIC:ifdef usedEvent.onReset
 	onReset();
-	#endif
+	EMIC:endif
 
 }
 
@@ -25,6 +25,6 @@ void setup() {
 void loop() {
 
 
-  #newRFIcode(temp/EMICpolling.c.h)
+  EMIC:setInput(temp/EMICpolling.c.h)
 
 }

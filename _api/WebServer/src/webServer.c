@@ -1,4 +1,4 @@
-#ifndef __WEBSERVER_C__
+EMIC:ifndef __WEBSERVER_C__
 #define __WEBSERVER_C__
 
 void HTTPInit(void)
@@ -18,4 +18,4 @@ void HTTPUploadImage(void)
     esp_camera_fb_return(fb);
 }
 
-#endif
+EMIC:endif

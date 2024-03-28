@@ -1,11 +1,11 @@
-#ifndef _INIT_EMIC
+EMIC:ifndef _INIT_EMIC
 	#define _INIT_EMIC
-	#setFile target.ino
+	EMIC:setOutput(TARGET:target.ino)
 	##include(inc/init.h)
-	#unSetFile
+	EMIC:restoreOutput
 
-	#setFile src.c
+	EMIC:setOutput(TARGET:src.c)
 	##include(src/init.c|src/init.c.h)
-	#unSetFile
+	EMIC:restoreOutput
 
-#endif
+EMIC:endif

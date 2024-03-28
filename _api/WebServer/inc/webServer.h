@@ -1,4 +1,4 @@
-#ifndef __WEBSERVER_H__
+EMIC:ifndef __WEBSERVER_H__
 #define __WEBSERVER_H__
 
 #include <HTTPClient.h>
@@ -15,4 +15,4 @@ void HTTPInit(void);
 
 void HTTPUploadImage();
 
-#endif
+EMIC:endif

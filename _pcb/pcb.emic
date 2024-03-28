@@ -1,4 +1,3 @@
-#setFile target.ino
-	##include(inc\_{pcb}_.h)
-#unSetFile
+##include(inc\_{pcb}_)
+EMIC:define(main_includes._{pcb}_,_{pcb}_)
 

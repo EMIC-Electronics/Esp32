@@ -7,10 +7,10 @@
 * @return Nothing
 */
 
-#setFile target.ino
+EMIC:setOutput(TARGET:target.ino)
 	##include(inc/wifi.h)
-#unSetFile
+EMIC:restoreOutput
 
-#setFile src.c
+EMIC:setOutput(TARGET:src.c)
 	##include(src/wifi.c|src/wifi.c.h)
-#unSetFile
+EMIC:restoreOutput

@@ -1,4 +1,4 @@
-#ifndef __CONVERSIONFUNCTIONS_C__
+EMIC:ifndef __CONVERSIONFUNCTIONS_C__
 #define __CONVERSIONFUNCTIONS_C__
 
 float ato_float(char* number)
@@ -91,4 +91,4 @@ int64_t ato_int64_t(char* string)
     return atoll(string);
 }
 
-#endif //__CONVERSIONFUNCTIONS_C__
+EMIC:endif //__CONVERSIONFUNCTIONS_C__

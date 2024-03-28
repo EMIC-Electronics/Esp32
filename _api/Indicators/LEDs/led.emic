@@ -1,6 +1,6 @@
 //RFI TAG:driverName=LED
 
-#ifdef PIN_Led1
+EMIC:ifdef PIN_Led1
 
 
 /**
@@ -37,11 +37,11 @@
 <div type='void' class='lineaDeCodigo' definir='use_blkLed1_function use_pullLeds_function'  originalclass='funcion' originalid='blkLed1' draggable='true' ondragstart='drag_linea(event)' >Led1.blink(<div title='time on (ms)' class='parametroDiv' type='uint16_t'></div>,<div title='period (ms)' class='parametroDiv' type='uint16_t'></div> ,<div title='times' class='parametroDiv' type='uint16_t'></div>)</div>"
 }
 */
-#endif
+EMIC:endif
 
 
 
-#ifdef PIN_Led2
+EMIC:ifdef PIN_Led2
 
 
 /**
@@ -78,19 +78,17 @@
 <div type='void' class='lineaDeCodigo' definir='use_blkLed1_function use_pullLeds_function'  originalclass='funcion' originalid='blkLed1' draggable='true' ondragstart='drag_linea(event)' >Led1.blink(<div title='time on (ms)' class='parametroDiv' type='uint16_t'></div>,<div title='period (ms)' class='parametroDiv' type='uint16_t'></div> ,<div title='times' class='parametroDiv' type='uint16_t'></div>)</div>"
 }
 */
-#endif
+EMIC:endif
 
 
 
-#newRFIcode(_hal/.{UC_FAMILY}./_hard/GPIO/gpio.emic)
-#newRFIcode(_hal/.{UC_FAMILY}./_hard/Timer/timer.emic)
+EMIC:setInput(SYS:_hal/.{UC_FAMILY}./_hard/GPIO/gpio.emic)
+EMIC:setInput(SYS:_hal/.{UC_FAMILY}./_hard/Timer/timer.emic)
 
-#setFile target.ino
-	##include(inc\ledV2.h)
-#unSetFile
+EMIC:copy(inc/ledV2.h > TARGET:inc/ledV2.h)
+EMIC:define(main_includes.ledV2,ledV2)
 
-#setFile src.c
-	##include(src\ledV2.c|src\ledV2.c.h)
-#unSetFile
+EMIC:copy(src/ledV2.c > TARGET:src/ledV2.c.h)
+EMIC:define(src_includes.ledV2,ledV2.c.h)
 
 

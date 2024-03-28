@@ -1,4 +1,4 @@
 #insertFile(defines.h)
 #insertFile(dynamicsDefines.h)
 #insertFile(definitions.h)
-//#newRFIcode(_interprete\userResources.emic)
+//EMIC:setInput(SYS:_interprete\userResources.emic)

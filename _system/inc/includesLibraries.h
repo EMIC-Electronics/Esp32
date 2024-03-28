@@ -1,30 +1,30 @@
 ///////////////////////////////////////////
 //Librerias de Texto
 ///////////////////////////////////////////
-#ifdef uselengthV1
-#newRFIcode(_util\Strings\length.emic)
-#endif
+EMIC:ifdef uselengthV1
+EMIC:setInput(SYS:_util\Strings\length.emic)
+EMIC:endif
 
-#ifdef useisContainedInV1
-#newRFIcode(_util\Strings\isContainedIn.emic)
-#endif
+EMIC:ifdef useisContainedInV1
+EMIC:setInput(SYS:_util\Strings\isContainedIn.emic)
+EMIC:endif
 
-#ifdef usecompareV1
-#newRFIcode(_util\Strings\compare.emic)
-#endif
+EMIC:ifdef usecompareV1
+EMIC:setInput(SYS:_util\Strings\compare.emic)
+EMIC:endif
 
-#ifdef usetoUpperCaseV1
-#newRFIcode(_util\Strings\toUpperCase.emic)
-#endif
+EMIC:ifdef usetoUpperCaseV1
+EMIC:setInput(SYS:_util\Strings\toUpperCase.emic)
+EMIC:endif
 
-#ifdef usetoLetterCaseV1
-#newRFIcode(_util\Strings\toLetterCase.emic)
-#endif
+EMIC:ifdef usetoLetterCaseV1
+EMIC:setInput(SYS:_util\Strings\toLetterCase.emic)
+EMIC:endif
 
-#ifdef useclearBlankSpacesV1
-#newRFIcode(_util\Strings\clearBlankSpaces.emic)
-#endif
+EMIC:ifdef useclearBlankSpacesV1
+EMIC:setInput(SYS:_util\Strings\clearBlankSpaces.emic)
+EMIC:endif
 
-#ifdef useindexV1
-#newRFIcode(_util\Strings\index.emic)
-#endif
+EMIC:ifdef useindexV1
+EMIC:setInput(SYS:_util\Strings\index.emic)
+EMIC:endif

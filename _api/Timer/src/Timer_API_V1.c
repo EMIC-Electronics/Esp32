@@ -26,7 +26,7 @@ void init_timer_api(void)
 
 }
 
-#ifdef use_setTime1_function
+EMIC:ifdef usedFuncion.setTime1
 void setTime1(uint32_t setPoint1_ms_local, char modo_timer1_local)
 {
 	setPoint1_ms = setPoint1_ms_local;
@@ -34,18 +34,18 @@ void setTime1(uint32_t setPoint1_ms_local, char modo_timer1_local)
 	time1_ms =  timeStamp;
 }
 
-#endif
+EMIC:endif
 
-#ifdef use_setTime2_function
+EMIC:ifdef usedFuncion.setTime2
 void setTime2(uint32_t setPoint2_ms_local, char modo_timer2_local)
 {
 	setPoint2_ms = setPoint2_ms_local;
 	modo_timer2 = modo_timer2_local;
 	time2_ms =  timeStamp;
 }
-#endif
+EMIC:endif
 
-#ifdef use_setTime3_function
+EMIC:ifdef usedFuncion.setTime3
 void setTime3(uint32_t setPoint3_ms_local, char modo_timer3_local)
 {
 	setPoint3_ms = setPoint3_ms_local;
@@ -53,9 +53,9 @@ void setTime3(uint32_t setPoint3_ms_local, char modo_timer3_local)
 	time3_ms =  timeStamp;
 }
 
-#endif
+EMIC:endif
 
-#ifdef use_setTime4_function
+EMIC:ifdef usedFuncion.setTime4
 void setTime4(uint32_t setPoint4_ms_local, char modo_timer4_local)
 {
 	setPoint4_ms = setPoint4_ms_local;
@@ -63,30 +63,30 @@ void setTime4(uint32_t setPoint4_ms_local, char modo_timer4_local)
 	time4_ms =  timeStamp;
 }
 
-#endif
+EMIC:endif
 
-#ifdef use_setTime5_function
+EMIC:ifdef usedFuncion.setTime5
 void setTime5(uint32_t setPoint5_ms_local, char modo_timer5_local)
 {
 	setPoint5_ms = setPoint5_ms_local;
 	modo_timer5 = modo_timer5_local;
 	time5_ms =  timeStamp;
 }
-#endif
+EMIC:endif
 
-#ifdef use_setTime6_function
+EMIC:ifdef usedFuncion.setTime6
 void setTime6(uint32_t setPoint6_ms_local, char modo_timer6_local)
 {
 	setPoint6_ms = setPoint6_ms_local;
 	modo_timer6 = modo_timer6_local;
 	time6_ms =  timeStamp;
 }
-#endif
+EMIC:endif
 
 
 void TicPoll(void)
 {
-	#ifdef event_etOut1_active
+	EMIC:ifdef usedEvent.etOut1
 		if ( setPoint1_ms > 0 &&  timeStamp > time1_ms + setPoint1_ms)
 		{	
 			if(modo_timer1 == 'T')
@@ -99,8 +99,8 @@ void TicPoll(void)
 			}
 			etOut1();
 		}
-	#endif
-	#ifdef event_etOut2_active
+	EMIC:endif
+	EMIC:ifdef usedEvent.etOut2
 		if ( setPoint2_ms > 0 &&  timeStamp > time2_ms + setPoint2_ms)
 		{	
 			if(modo_timer2 == 'T')
@@ -109,8 +109,8 @@ void TicPoll(void)
 				time2_ms = timeStamp;
 			etOut2();
 		}
-	#endif
-	#ifdef event_etOut3_active
+	EMIC:endif
+	EMIC:ifdef usedEvent.etOut3
 		if ( setPoint3_ms > 0 &&  timeStamp > time3_ms + setPoint3_ms)
 		{	
 			if(modo_timer3 == 'T')
@@ -119,8 +119,8 @@ void TicPoll(void)
 				time3_ms = timeStamp;
 			etOut3();
 		}
-	#endif
-	#ifdef event_etOut4_active
+	EMIC:endif
+	EMIC:ifdef usedEvent.etOut4
 		if ( setPoint4_ms > 0 &&  timeStamp > time4_ms + setPoint4_ms)
 		{	
 			if(modo_timer4 == 'T')
@@ -129,8 +129,8 @@ void TicPoll(void)
 				time4_ms = timeStamp;
 			etOut4();
 		}
-	#endif
-	#ifdef event_etOut5_active
+	EMIC:endif
+	EMIC:ifdef usedEvent.etOut5
 		if ( setPoint5_ms > 0 &&  timeStamp > time5_ms + setPoint5_ms)
 		{	
 			if(modo_timer5 == 'T')
@@ -139,8 +139,8 @@ void TicPoll(void)
 				time5_ms = timeStamp;
 			etOut5();
 		}
-	#endif	
-	#ifdef event_etOut6_active
+	EMIC:endif	
+	EMIC:ifdef usedEvent.etOut6
 		if ( setPoint6_ms > 0 &&  timeStamp > time6_ms + setPoint6_ms)
 		{				
 			if(modo_timer6 == 'T')
@@ -149,6 +149,6 @@ void TicPoll(void)
 				time6_ms = timeStamp;
 			etOut6();
 		}
-	#endif
+	EMIC:endif
 }
 

@@ -1,12 +1,12 @@
-#ifndef _TIMER_EMIC_
+EMIC:ifndef _TIMER_EMIC_
 #define _TIMER_EMIC_
 
-#setFile target.ino
+EMIC:setOutput(TARGET:target.ino)
 ##include(inc\timer.h)
-#unSetFile
+EMIC:restoreOutput
 
-#setFile src.c.h
+EMIC:setOutput(TARGET:src.c).h
 ##include(src\timer.c|src\timer.c.h)
-#unSetFile
+EMIC:restoreOutput
 
-#endif
+EMIC:endif

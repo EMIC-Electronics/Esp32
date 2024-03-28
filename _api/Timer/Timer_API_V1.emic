@@ -1,7 +1,7 @@
 //RFI TAG:driverName=TIMER
 
 
-#ifndef _TIMER_API_EMIC_
+EMIC:ifndef _TIMER_API_EMIC_
 #define _TIMER_API_EMIC_
 
 
@@ -236,15 +236,13 @@
 }
 */
 
-#newRFIcode(_hal/.{UC_FAMILY}./_hard/Timer/timer.emic)
+EMIC:setInput(SYS:_hal/.{UC_FAMILY}./_hard/Timer/timer.emic)
 
-#setFile target.ino
-	##include(inc\Timer_API_V1.h)
-#unSetFile
+EMIC:copy(inc/Timer_API_V1.h > TARGET:inc/Timer_API_V1.h)
+EMIC:define(main_includes.Timer_API_V1,Timer_API_V1)
 
-#setFile src.c
-	##include(src\Timer_API_V1.c|src\Timer_API_V1.c.h)
-#unSetFile
+EMIC:copy(src/Timer_API_V1.c > TARGET:src/Timer_API_V1.c.h)
+EMIC:define(src_includes.Timer_API_V1,Timer_API_V1.c.h)
 
 /*==================[end of file]============================================*/
-#endif
+EMIC:endif

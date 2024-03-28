@@ -1,17 +1,17 @@
-#ifndef _STREAM_EMIC
+EMIC:ifndef _STREAM_EMIC
 #define _STREAM_EMIC
 
 
-#newRFIcode(_system/Stream/streamIn.emic)
-#newRFIcode(_system/Stream/streamOut.emic)
+EMIC:setInput(SYS:_system/Stream/streamIn.emic)
+EMIC:setInput(SYS:_system/Stream/streamOut.emic)
 
 
-#setFile codigo.c
+EMIC:setOutput(TARGET:codigo.c)
     ##include(inc/stream.h)
-#unSetFile
+EMIC:restoreOutput
 
-#setFile src.c
+EMIC:setOutput(TARGET:src.c)
     ##include(src/stream.c)
-#unSetFile
+EMIC:restoreOutput
 
-#endif
+EMIC:endif
