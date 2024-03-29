@@ -7,10 +7,8 @@
 * @return Nothing
 */
 
-EMIC:setOutput(TARGET:target.ino)
-	##include(inc/wifi.h)
-EMIC:restoreOutput
+EMIC:copy(inc/wifi.h > TARGET:inc/wifi.h)
+EMIC:define(main_includes.wifi,wifi)
 
-EMIC:setOutput(TARGET:src.c)
-	##include(src/wifi.c|src/wifi.c.h)
-EMIC:restoreOutput
+EMIC:copy(src/wifi.c > TARGET:src/wifi.c.h)
+EMIC:define(src_includes.wifi,wifi)

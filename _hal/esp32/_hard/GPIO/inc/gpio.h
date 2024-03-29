@@ -1,6 +1,6 @@
 
-EMIC:ifndef PIC_GPIO_H_
-#define PIC_GPIO_H_
+#ifndef _GPIO_H_
+#define _GPIO_H_
 
 #define	GPIO_OUTPUT OUTPUT
 #define GPIO_INPUT INPUT
@@ -17,4 +17,4 @@ EMIC:ifndef PIC_GPIO_H_
 #define HAL_GPIO_PinGet(name) digitalRead(PIN_##name)
 
 
-EMIC:endif
+#endif

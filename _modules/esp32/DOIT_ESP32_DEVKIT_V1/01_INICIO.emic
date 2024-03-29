@@ -3,13 +3,13 @@ EMIC:setOutput(TARGET:target.ino)
 EMIC:define(UC_FAMILY,esp32)
 
 //--------------Hardware Config---------------------
-EMIC:setInput(SYS:_pcb\pcb.emic,pcb=DOIT_ESP32_DEVKIT_V1)
+EMIC:setInput(DEV:_pcb\pcb.emic,pcb=DOIT_ESP32_DEVKIT_V1)
 
 //------------- Driver Config -----------------------
-EMIC:setInput(SYS:_api/Indicators/LEDs/led.emic)
-EMIC:setInput(SYS:_api\Timer\Timer_API_V1.emic)
+EMIC:setInput(DEV:_api/Indicators/LEDs/led.emic)
+EMIC:setInput(DEV:_api\Timer\Timer_API_V1.emic)
 
 //-------------------- main -------------------------
-EMIC:setInput(SYS:_main/esp32/arduino/main.emic)
+EMIC:setInput(DEV:_main/esp32/arduino/main.emic)
 
 EMIC:restoreOutput   

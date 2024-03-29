@@ -1,6 +1,8 @@
-EMIC:ifndef PIC_GPIO_H_
+EMIC:ifndef _GPIO_EMIC_
+EMIC:define(_GPIO_EMIC_,true)
 
-    EMIC:setOutput(TARGET:target.ino)
-        ##include(inc/gpio.h)
-    EMIC:restoreOutput
+EMIC:copy(inc/gpio.h > TARGET:inc/gpio.h)
+EMIC:define(main_includes.gpio,gpio)
+
+
 EMIC:endif

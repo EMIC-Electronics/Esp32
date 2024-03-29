@@ -1,9 +1,8 @@
 EMIC:ifndef __streamOut_emic__
 #define __streamOut_emic__
 
-EMIC:setOutput(TARGET:codigo.c)
-    ##include(inc/streamOut.h)
-EMIC:restoreOutput
+EMIC:copy(streamOut > streamOut)
+EMIC:define(main_includes.streamOut,streamOut)
 
 // EMIC:setOutput(TARGET:src.c)
 //     ##include(src/streamOut.c)

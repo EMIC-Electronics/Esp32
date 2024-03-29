@@ -1,3 +1,6 @@
+#ifndef _FTP_H
+#define _FTP_H
+
 #include "../ESP32_FTPClient.h"
 
 #include "../NTPClient.h" //For request date and time
@@ -12,3 +15,5 @@ NTPClient FTP_timeClient(udp_conn);
 char ftp_path []  = "/";                /**< FTP path.  */
 
 void initFTP(void);
+
+#endif

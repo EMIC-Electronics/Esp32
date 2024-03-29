@@ -17,7 +17,7 @@ EMIC:endif
 
 
 
-EMIC:ifdef usedFuncion.led1
+EMIC:ifdef usedFunction.led1
 void led1(int status)
 {
 	switch (status)
@@ -42,7 +42,7 @@ void led1(int status)
 doCMDf(led1)
 EMIC:endif
 
-EMIC:ifdef usedFuncion.led2
+EMIC:ifdef usedFunction.led2
 void led2(led_status_t status)
 {
 	switch (status)
@@ -67,7 +67,7 @@ void led2(led_status_t status)
 doCMDf(led2)
 EMIC:endif
 
-EMIC:ifdef usedFuncion.LED3
+EMIC:ifdef usedFunction.LED3
 void led3(led_status_t status)
 {
 	switch (status)
@@ -92,7 +92,7 @@ void led3(led_status_t status)
 doCMDf(led3)
 EMIC:endif
 
-EMIC:ifdef usedFuncion.LED4
+EMIC:ifdef usedFunction.LED4
 void led4(led_status_t status)
 {
 	switch (status)
@@ -120,7 +120,7 @@ EMIC:endif
 
 
 
-EMIC:ifdef usedFuncion.blkLed1
+EMIC:ifdef usedFunction.blkLed1
 uint16_t blkLed1_timerOn = 0; 
 uint16_t blkLed1_period = 0; 
 uint16_t blkLed1_times = 0; 
@@ -139,7 +139,7 @@ EMIC:endif
 
 
 
-EMIC:ifdef usedFuncion.blkLed2
+EMIC:ifdef usedFunction.blkLed2
 
 uint16_t blkLed2_timerOn = 0; 
 uint16_t blkLed2_period = 0; 
@@ -157,7 +157,7 @@ void blkLed2(uint16_t timeOn, uint16_t period, uint16_t times)
 doCMDf(blkLed2)
 EMIC:endif
 
-EMIC:ifdef usedFuncion.blkLed3
+EMIC:ifdef usedFunction.blkLed3
 uint16_t blkLed3_timerOn = 0; 
 uint16_t blkLed3_period = 0; 
 uint16_t blkLed3_times = 0; 
@@ -174,7 +174,7 @@ void blkLed3(uint16_t timeOn, uint16_t period, uint16_t times)
 doCMDf(blkLed3)
 EMIC:endif
 
-EMIC:ifdef usedFuncion.blkLed4
+EMIC:ifdef usedFunction.blkLed4
 uint16_t blkLed4_timerOn = 0; 
 uint16_t blkLed4_period = 0; 
 uint16_t blkLed4_times = 0; 
@@ -192,10 +192,10 @@ doCMDf(blkLed4)
 EMIC:endif
 
 
-EMIC:ifdef usedFuncion.pullLeds
+EMIC:ifdef usedFunction.pullLeds
 void Poll_LEDs()
 {
-EMIC:ifdef usedFuncion.blkLed1
+EMIC:ifdef usedFunction.blkLed1
 	if (blkLed1_period > 0)
 	{
 		if (blkLed1_tStamp + blkLed1_period < timeStamp)
@@ -224,7 +224,7 @@ EMIC:ifdef usedFuncion.blkLed1
 EMIC:endif	
 
 
-EMIC:ifdef usedFuncion.blkLed2
+EMIC:ifdef usedFunction.blkLed2
 	if (blkLed2_period > 0)
 	{
 		if (blkLed2_tStamp + blkLed2_period < timeStamp)
@@ -252,7 +252,7 @@ EMIC:ifdef usedFuncion.blkLed2
 
 EMIC:endif
 
-EMIC:ifdef usedFuncion.blkLed3
+EMIC:ifdef usedFunction.blkLed3
 	if (blkLed3_period > 0)
 	{
 		if (blkLed3_tStamp + blkLed3_period < timeStamp)
@@ -280,7 +280,7 @@ EMIC:ifdef usedFuncion.blkLed3
 
 EMIC:endif
 
-EMIC:ifdef usedFuncion.blkLed4
+EMIC:ifdef usedFunction.blkLed4
 	if (blkLed4_period > 0)
 	{
 		if (blkLed4_tStamp + blkLed4_period < timeStamp)

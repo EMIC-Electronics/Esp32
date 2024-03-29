@@ -34,10 +34,8 @@
 * @return Nothing
 */
 
-EMIC:setOutput(TARGET:target.ino)
-	##include(inc/ftp.h)
-EMIC:restoreOutput
+EMIC:copy(inc/ftp.h > TARGET:inc/ftp.h)
+EMIC:define(main_includes.ftp,ftp)
 
-EMIC:setOutput(TARGET:src.c)
-	##include(src/ftp.c|src/ftp.c.h)
-EMIC:restoreOutput
+EMIC:copy(src/ftp.c > src/ftp.c.h)
+EMIC:define(src_includes.ftp,ftp)

@@ -82,13 +82,13 @@ EMIC:endif
 
 
 
-EMIC:setInput(SYS:_hal/.{UC_FAMILY}./_hard/GPIO/gpio.emic)
-EMIC:setInput(SYS:_hal/.{UC_FAMILY}./_hard/Timer/timer.emic)
+EMIC:setInput(DEV:_hal/.{UC_FAMILY}./_hard/GPIO/gpio.emic)
+EMIC:setInput(DEV:_hal/.{UC_FAMILY}./_hard/Timer/timer.emic)
 
 EMIC:copy(inc/ledV2.h > TARGET:inc/ledV2.h)
 EMIC:define(main_includes.ledV2,ledV2)
 
 EMIC:copy(src/ledV2.c > TARGET:src/ledV2.c.h)
-EMIC:define(src_includes.ledV2,ledV2.c.h)
+EMIC:define(src_includes.ledV2,ledV2)
 
 

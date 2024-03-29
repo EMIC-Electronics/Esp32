@@ -1,3 +1,4 @@
-##include(inc\_{pcb}_)
-EMIC:define(main_includes._{pcb}_,_{pcb}_)
+EMIC:copy(inc\.{pcb}..h > TARGET:inc\.{pcb}..h)
+
+EMIC:define(main_includes..{pcb}.,.{pcb}.)
 

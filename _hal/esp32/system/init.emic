@@ -1,11 +1,10 @@
 EMIC:ifndef _INIT_EMIC
-	#define _INIT_EMIC
-	EMIC:setOutput(TARGET:target.ino)
-	##include(inc/init.h)
-	EMIC:restoreOutput
+	EMIC:define(_INIT_EMIC,true)
+	
+	EMIC:copy(inc/init.h > TARGET:inc/init.h)
+	EMIC:define(main_includes.init,init)
 
-	EMIC:setOutput(TARGET:src.c)
-	##include(src/init.c|src/init.c.h)
-	EMIC:restoreOutput
+	EMIC:copy(src/init.c > TARGET:src/init.c.h)
+	EMIC:define(src_includes.init,init)
 
 EMIC:endif

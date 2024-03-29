@@ -4,6 +4,5 @@ EMIC:setOutput(TARGET:codigo.c)
     ##include(inc\conversionFunctions.h)
 EMIC:restoreOutput
 
-EMIC:setOutput(TARGET:src.c)
-    ##include(src\conversionFunctions.c)
-EMIC:restoreOutput
+EMIC:copy(conversionFunctions > conversionFunctions)
+EMIC:define(src_includes.conversionFunctions,conversionFunctions)

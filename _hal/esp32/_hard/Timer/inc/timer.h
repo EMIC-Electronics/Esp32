@@ -9,10 +9,10 @@
   @version  20200604 v0.0.1   PL Initial release.
  ******************************************************************************/
  
-EMIC:ifndef _TIMER_H_
+#ifndef _TIMER_H_
 #define _TIMER_H_
 
 #define timeStamp millis()
 
 
-EMIC:endif
+#endif

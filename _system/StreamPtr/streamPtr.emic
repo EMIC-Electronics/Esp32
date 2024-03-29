@@ -2,16 +2,14 @@ EMIC:ifndef _STREAM_EMIC
 #define _STREAM_EMIC
 
 
-// EMIC:setInput(SYS:_system/Stream/streamIn.emic)
-// EMIC:setInput(SYS:_system/Stream/streamOut.emic)
+// EMIC:setInput(DEV:_system/Stream/streamIn.emic)
+// EMIC:setInput(DEV:_system/Stream/streamOut.emic)
 
 
-EMIC:setOutput(TARGET:codigo.c)
-    ##include(inc/streamPtr.h)
-EMIC:restoreOutput
+EMIC:copy(streamPtr > streamPtr)
+EMIC:define(main_includes.streamPtr,streamPtr)
 
-EMIC:setOutput(TARGET:src.c)
-    ##include(src/streamPtr.c)
-EMIC:restoreOutput
+EMIC:copy(streamPtr > streamPtr)
+EMIC:define(src_includes.streamPtr,streamPtr)
 
 EMIC:endif

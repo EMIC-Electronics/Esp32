@@ -82,9 +82,9 @@ void NTPClient::begin(unsigned int port) {
 }
 
 bool NTPClient::forceUpdate() {
-  EMIC:ifdef DEBUG_NTPClient
+  #ifdef DEBUG_NTPClient
     Serial.println("Update from NTP Server");
-  EMIC:endif
+  #endif
 
   // flush any existing packets
   while(this->_udp->parsePacket() != 0)

@@ -1,8 +1,8 @@
+#ifndef _WI_FI_H_
+#define _WI_FI_H_
+
 #include <WiFi.h>
 #include <WiFiClient.h>
-
-//const char* WIFI_SSID = "TeleCentro-7118"; 
-//const char* WIFI_PASS = "boxitracio";
 
 
 char WIFI_SSID[32];		/**< Service Set Identifier. */
@@ -13,3 +13,5 @@ void initWiFi(void);
 void WiFi_connect();	//Connect method.
 
 EMIC:define(inits.initWiFi,initWiFi)
+
+#endif

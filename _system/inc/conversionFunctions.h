@@ -1,4 +1,4 @@
-EMIC:ifndef __CONVERSIONFUNCTIONS_H__
+#ifndef __CONVERSIONFUNCTIONS_H__
 #define __CONVERSIONFUNCTIONS_H__
 inline float ato_float(char* number);                           //string to float
 inline double ato_double(char* number);                         //string to double
@@ -21,4 +21,4 @@ inline int16_t ato_int16_t(char* string);                         //string to in
 inline int32_t ato_int32_t(char* string);                         //string to int32_t
 inline int64_t ato_int64_t(char* string);                         //string to int64_t
 
-EMIC:endif //__CONVERSIONFUNCTIONS_H__
+#endif //__CONVERSIONFUNCTIONS_H__

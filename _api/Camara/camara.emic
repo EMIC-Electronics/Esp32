@@ -11,4 +11,6 @@ EMIC:copy(inc/camara.h > TARGET:inc/camara.h)
 EMIC:define(main_includes.camara,camara)
 
 EMIC:copy(src/camara.c > TARGET:src/camara.c.h)
-EMIC:define(src_includes.camara,camara.c.h)
+EMIC:define(src_includes.camara,camara)
+
+EMIC:define(inits.initCamera,initCamera)

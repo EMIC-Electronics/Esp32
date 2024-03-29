@@ -1,4 +1,4 @@
 #insertFile(defines.h)
 #insertFile(dynamicsDefines.h)
 #insertFile(definitions.h)
-//EMIC:setInput(SYS:_interprete\userResources.emic)
+//EMIC:setInput(DEV:_interprete\userResources.emic)

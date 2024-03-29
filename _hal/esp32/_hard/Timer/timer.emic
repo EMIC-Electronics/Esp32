@@ -1,12 +1,10 @@
 EMIC:ifndef _TIMER_EMIC_
 #define _TIMER_EMIC_
 
-EMIC:setOutput(TARGET:target.ino)
-##include(inc\timer.h)
-EMIC:restoreOutput
+EMIC:copy(inc/timer.h > TARGET:inc/timer.h)
+EMIC:define(main_includes.timer,timer)
 
-EMIC:setOutput(TARGET:src.c).h
-##include(src\timer.c|src\timer.c.h)
-EMIC:restoreOutput
+EMIC:copy(src/timer.c > src/timer.c.h)
+EMIC:define(src_includes.timer,timer)
 
 EMIC:endif
