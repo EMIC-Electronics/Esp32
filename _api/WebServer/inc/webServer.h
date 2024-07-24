@@ -9,8 +9,8 @@ HTTPClient http;
 WiFiUDP ntpUDP;
 NTPClient HTTP_timeClient(ntpUDP);
 
-char HTTP_URL[] = "https://6mrlm5o8fa.execute-api.us-east-1.amazonaws.com/Prod/classify_digit"; /**< URL where the photo will be uploaded. */
-
+char HTTP_URL[] = "https://anrbu36ybh.execute-api.us-east-1.amazonaws.com/Prod/classify_digit"; /**< URL where the photo will be uploaded. */
+                  
 void HTTPInit(void);
 
 void HTTPUploadImage();
