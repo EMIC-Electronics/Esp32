@@ -1,6 +1,6 @@
-#ifndef PIC_GPIO_H_
-
-    #setFile target.ino
-        ##include(inc/gpio.h)
-    #unSetFile
-#endif
+EMIC:ifndef(PIC_GPIO_H_)
+    EMIC:setOutput(target.ino)
+    	EMIC:copy(inc/gpio.h > TARGET:inc/gpio.h)
+    	EMIC:define(includes_target.gpio,gpio)
+    EMIC:restoreOutput
+    EMIC:endif

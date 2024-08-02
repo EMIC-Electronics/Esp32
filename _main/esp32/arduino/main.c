@@ -1,30 +1,32 @@
-#include "userFncFile.h"  //No RFI scan
-#include "inc/userVars.h"  //No RFI scan
-#include "src.c.h"  //No RFI scan
-#include "userFncFile.c.h"  //No RFI scan
+EMIC:setInput(DEV:_hal/.{UC_FAMILY}./system/init.emic)
 
-#newRFIcode(_hal/.{UC_FAMILY}./system/init.emic)
+//--------- includes_target ---------------------------------
+#include "inc/.{includes_target.*}..h"
 
+//--------- includes in main.c ---------------------------------
+#include "inc/userFncFile.h"
+#include "inc/userVars.h"
+#include "userFncFile.c.h"
 
+//--------- includes_src ---------------------------------
+#include "src/.{includes_src.*}..c.h"
 
-void setup() {
-  
-	#ifdef event_preInit_active
-	preInit();
-	#endif
-
+//--------- code in main.c ---------------------------------
+void setup()
+{
 	initSystem();
-	#newRFIcode(temp/EMICinits.c.h)
-	#ifdef event_onReset_active
+	EMIC:ifdef usedEvent.SystemConfig
+	SystemConfig();
+	EMIC:endif
+	.{inits.*}.();
+	EMIC:ifdef usedEvent.onReset
 	onReset();
-	#endif
+	EMIC:endif
 
 }
 
 // the loop function runs over and over again forever
-void loop() {
-
-
-  #newRFIcode(temp/EMICpolling.c.h)
-
+void loop()
+{
+	.{polls.*}.();
 }

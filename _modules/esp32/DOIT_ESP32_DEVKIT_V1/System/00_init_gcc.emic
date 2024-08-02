@@ -1,0 +1,4 @@
+EMIC:setInput(defines.h)
+EMIC:setInput(dynamicsDefines.h)
+EMIC:setInput(definitions.h)
+//#newRFIcode(_interprete\userResources.emic)

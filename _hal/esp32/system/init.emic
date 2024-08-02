@@ -1,11 +1,6 @@
-#ifndef _INIT_EMIC
-	#define _INIT_EMIC
-	#setFile target.ino
-	##include(inc/init.h)
-	#unSetFile
+EMIC:copy(inc/init.h > TARGET:inc/init.h)
+EMIC:define(includes_target.init,init)
 
-	#setFile src.c
-	##include(src/init.c|src/init.c.h)
-	#unSetFile
+EMIC:copy(src/init.c > TARGET:src/init.c.h)
+EMIC:define(includes_src.init,init)
 
-#endif

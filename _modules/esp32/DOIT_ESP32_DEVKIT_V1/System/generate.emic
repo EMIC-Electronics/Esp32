@@ -1,0 +1,6 @@
+EMIC:setOutput(target.ino)
+#addToMacro(UC_FAMILY,esp32)//--------------Hardware Config---------------------EMIC:setInput(DEV:_pcb\pcb.emic,pcb=DOIT_ESP32_DEVKIT_V1)
+//------------- Driver Config -----------------------EMIC:setInput(DEV:_api/Indicators/LEDs/led.emic)
+EMIC:setInput(DEV:_api\Timer\Timer_API_V1.emic)
+//-------------------- main -------------------------EMIC:setInput(DEV:_main/esp32/arduino/main.emic)
+EMIC:restoreOutput

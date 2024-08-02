@@ -1,12 +1,6 @@
-#ifndef _TIMER_EMIC_
-#define _TIMER_EMIC_
 
-#setFile target.ino
-##include(inc\timer.h)
-#unSetFile
+EMIC:copy(inc/timer.h > TARGET:inc/timer.h)
+EMIC:define(includes_target.timer,timer)
 
-#setFile src.c.h
-##include(src\timer.c|src\timer.c.h)
-#unSetFile
-
-#endif
+EMIC:copy(src/timer.c > TARGET:src/timer.c.h)
+EMIC:define(includes_src.timer,timer)

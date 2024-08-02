@@ -1,13 +1,11 @@
-#ifndef __streamIn_emic__
-#define __streamIn_emic__
-
-#setFile codigo.c
-    ##include(inc/streamIn.h)
-#unSetFile
-
-#setFile src.c
-    ##include(src/streamIn.c)
-#unSetFile
-
-
-#endif
+EMIC:ifndef(__streamIn_emic__)
+EMIC:define(__streamIn_emic__)
+EMIC:setOutput(codigo.c)
+	EMIC:copy(inc/streamIn.h > TARGET:inc/streamIn.h)
+	EMIC:define(includes_codigo.streamIn,streamIn)
+EMIC:restoreOutput
+EMIC:setOutput(src.c)
+	EMIC:copy(src/streamIn.c > TARGET:src/streamIn.c)
+	EMIC:define(includes_src.streamIn,streamIn)
+EMIC:restoreOutput
+EMIC:endif

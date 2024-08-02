@@ -1,4 +1,1 @@
-void initSystem(void)
-{
-
-}
+void initSystem(void){}

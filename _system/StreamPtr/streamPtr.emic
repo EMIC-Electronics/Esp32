@@ -1,17 +1,11 @@
-#ifndef _STREAM_EMIC
-#define _STREAM_EMIC
-
-
-// #newRFIcode(_system/Stream/streamIn.emic)
-// #newRFIcode(_system/Stream/streamOut.emic)
-
-
-#setFile codigo.c
-    ##include(inc/streamPtr.h)
-#unSetFile
-
-#setFile src.c
-    ##include(src/streamPtr.c)
-#unSetFile
-
-#endif
+EMIC:ifndef(_STREAM_EMIC)
+EMIC:define(_STREAM_EMIC)
+// #newRFIcode(_system/Stream/streamIn.emic)// #newRFIcode(_system/Stream/streamOut.emic)EMIC:setOutput(codigo.c)
+	EMIC:copy(inc/streamPtr.h > TARGET:inc/streamPtr.h)
+	EMIC:define(includes_codigo.streamPtr,streamPtr)
+EMIC:restoreOutput
+EMIC:setOutput(src.c)
+	EMIC:copy(src/streamPtr.c > TARGET:src/streamPtr.c)
+	EMIC:define(includes_src.streamPtr,streamPtr)
+EMIC:restoreOutput
+EMIC:endif

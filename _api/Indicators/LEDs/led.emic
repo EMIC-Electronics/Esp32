@@ -2,7 +2,6 @@
 
 #ifdef PIN_Led1
 
-
 /**
 * @fn void led1(uint16_t status);
 * @alias led1.state
@@ -11,86 +10,32 @@
 * @param status 1-on 0-off 2-toggle
 */
 
-/*RFI JSon
-{
-	'Nombre': 'blkLed1',
-	'NombreToolBox': 'led1.blink',
-	'Tipo' : 'SistemFnc',
-		'title': 'blink led1',
-	'FunctionReturn': "",
-	'FunctioNParametros': '',
-	'returnInfo': {'type':'','tooltip':'Nothing'},
-	'parameters': [{'name': 'timeOn',
-					'tooltip': '1-on, 0-off, 2-toggle',
-					'required': 'true',
-					'type': 'uint16_t'},
-					{'name': 'period',
-					'tooltip': '',
-					'required': 'true',
-					'type': 'uint16_t'},
-					{'name': 'times',
-					'tooltip': '',
-					'required': '',
-					'type': 'uint16_t'}
-					],
-	'InnerHTML':"
-<div type='void' class='lineaDeCodigo' definir='use_blkLed1_function use_pullLeds_function'  originalclass='funcion' originalid='blkLed1' draggable='true' ondragstart='drag_linea(event)' >Led1.blink(<div title='time on (ms)' class='parametroDiv' type='uint16_t'></div>,<div title='period (ms)' class='parametroDiv' type='uint16_t'></div> ,<div title='times' class='parametroDiv' type='uint16_t'></div>)</div>"
-}
-*/
-#endif
-
-
-
-#ifdef PIN_Led2
-
-
 /**
-* @fn void led1(uint16_t status);
-* @alias led1.state
-* @brief Change the state of the led, 1-on, 0-off, 2-toggle
+* @fn void blkLed1(uint16_t timeOn,uint16_t period,uint16_t times);
+* @alias led1.blink
+* @brief Blink led
+* @param timeOn timeOn
+* @param period period
+* @param times times
 * @return Nothing
-* @param status 1-on 0-off 2-toggle
 */
 
-/*RFI JSon
-{
-	'Nombre': 'blkLed1',
-	'NombreToolBox': 'led1.blink',
-	'Tipo' : 'SistemFnc',
-		'title': 'blink led1',
-	'FunctionReturn': "",
-	'FunctioNParametros': '',
-	'returnInfo': {'type':'','tooltip':'Nothing'},
-	'parameters': [{'name': 'timeOn',
-					'tooltip': '1-on, 0-off, 2-toggle',
-					'required': 'true',
-					'type': 'uint16_t'},
-					{'name': 'period',
-					'tooltip': '',
-					'required': 'true',
-					'type': 'uint16_t'},
-					{'name': 'times',
-					'tooltip': '',
-					'required': '',
-					'type': 'uint16_t'}
-					],
-	'InnerHTML':"
-<div type='void' class='lineaDeCodigo' definir='use_blkLed1_function use_pullLeds_function'  originalclass='funcion' originalid='blkLed1' draggable='true' ondragstart='drag_linea(event)' >Led1.blink(<div title='time on (ms)' class='parametroDiv' type='uint16_t'></div>,<div title='period (ms)' class='parametroDiv' type='uint16_t'></div> ,<div title='times' class='parametroDiv' type='uint16_t'></div>)</div>"
-}
-*/
-#endif
+
+EMIC:endif
 
 
 
-#newRFIcode(_hal/.{UC_FAMILY}./_hard/GPIO/gpio.emic)
-#newRFIcode(_hal/.{UC_FAMILY}./_hard/Timer/timer.emic)
+EMIC:setInput(DEV:_hal/.{UC_FAMILY}./_hard/GPIO/gpio.emic)
+EMIC:setInput(DEV:_hal/.{UC_FAMILY}./_hard/Timer/timer.emic)
 
-#setFile target.ino
-	##include(inc\ledV2.h)
-#unSetFile
+EMIC:setOutput(target.ino)
+	EMIC:copy(inc/ledV2.h > TARGET:inc/ledV2.h)
+	EMIC:define(includes_target.ledV2,ledV2)
+EMIC:restoreOutput
 
-#setFile src.c
-	##include(src\ledV2.c|src\ledV2.c.h)
-#unSetFile
+EMIC:setOutput(src.c)
+	EMIC:copy(src/ledV2.c > TARGET:src/ledV2.c.h)
+	EMIC:define(includes_src.ledV2.c,ledV2.c
+)EMIC:restoreOutput
 
 

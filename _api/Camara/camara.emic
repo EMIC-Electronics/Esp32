@@ -7,10 +7,8 @@
 * @return Nothing
 */
 
-#setFile target.ino
-	##include(inc\camara.h)
-#unSetFile
+EMIC:copy(inc/camara.h > TARGET:inc/camara.h)
+EMIC:define(includes_target.camara,camara)
 
-#setFile src.c
-	##include(src\camara.c|src\camara.c.h)
-#unSetFile
+EMIC:copy(src/camara.c > TARGET:src/camara.c.h)
+EMIC:define(includes_src.camara,camara)
