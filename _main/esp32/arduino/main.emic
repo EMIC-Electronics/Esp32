@@ -5,6 +5,7 @@
 * @alias onReset
 * @brief When the module and all its functions are ready. 
 * @return Nothing
+>>>>>>> 2f279fd76599a4d6bd29a26d8292313d97fca4d0
 */
 
 /**
