@@ -1,54 +1,19 @@
-<<<<<<< HEAD
-// Definir que hace
-
 //RFI TAG:driverName=SYSTEM
 
-/*xRFI JSon
-{
-	'Nombre': 'onReset',
-	'NombreToolBox': 'onReset',
-	'Tipo' : 'SistemEvt',
-	'title': 'When the module and all its functions are ready',
-	'ReturnInfo': {'type':'','tooltip':'nothing'},
-	'parameters': [],
-	'instancia':'{
-		"NombreWorkBox": "Event.SYSTEM.onReset",
-		"definir":"event_OnReset_active",
-		"parametros": []
-		}'
-}
-=======
-//RFI TAG:driverName=SYSTEM
-
-
-
 /**
-* @fn extern void preInit(void);
-* @alias preReset
-* @brief This event is generated when the module is turned on, before the drivers are initialized, it can be used to configure the system.
-* @return Nothing
->>>>>>> 2f279fd76599a4d6bd29a26d8292313d97fca4d0
-*/
-
-
-/**
-* @fn extern void onReset(void);
+* @fn extern void onReset();
 * @alias onReset
-* @brief When the module and all its functions are ready
+* @brief When the module and all its functions are ready. 
 * @return Nothing
 */
 
+/**
+* @fn extern void SystemConfig();
+* @alias SystemConfig
+* @brief before initializing the drivers, recommended for initializing system variables. 
+* @return Nothing
+*/
 
-
-// #include <stdint.h>
-// #include <string.h>
-// #include <stdlib.h>
-// #include <math.h>
-
-// #newRFIcode(_system\systemInclusions.emic)
-
-
-
-#setFile target.ino
-    #newRFIcode(main.c)
-#unSetFile    
+EMIC:setOutput(target.ino)
+EMIC:setInput(main.c)
+EMIC:restoreOutput

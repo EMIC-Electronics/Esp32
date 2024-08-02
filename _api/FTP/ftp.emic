@@ -1,43 +1,8 @@
-//RFI TAG:driverName=FTP
-
-/*RFI JSon
-{
-	'Nombre': 'ftp_server',
-	'Tipo' : 'ConfigDynamic',
-	'title': 'FTP Server address',
-	"InnerHTML":"<div><label>FTP Server address:</label><input type='text' required name='ftp_server' value='192.168.0.57'></div>"
-}
-*/
-
-/*RFI JSon
-{
-	'Nombre': 'ftp_user',
-	'Tipo' : 'ConfigDynamic',
-	'title': 'FTP Server user',
-	"InnerHTML":"<div><label>FTP Server user:</label><input type='text' required name='ftp_user' value='anonymous'></div>"
-}
-*/
-
-/*RFI JSon
-{
-	'Nombre': 'ftp_pass',
-	'Tipo' : 'ConfigDynamic',
-	'title': 'FTP Server pass',
-	"InnerHTML":"<div><label>FTP Server pass:</label><input type='password' required name='ftp_pass' value=''></div>"
-}
-*/
-
-/**
-* @fn void ftpUploadImage(void);
-* @alias UploadImage
-* @brief Change the state of the led, 1-on, 0-off, 2-toggle
-* @return Nothing
-*/
-
-#setFile target.ino
-	##include(inc/ftp.h)
-#unSetFile
-
-#setFile src.c
-	##include(src/ftp.c|src/ftp.c.h)
-#unSetFile
+//RFI TAG:driverName=FTP/*RFI JSon{	'Nombre': 'ftp_server',	'Tipo' : 'ConfigDynamic',	'title': 'FTP Server address',	"InnerHTML":"<div><label>FTP Server address:</label><input type='text' required name='ftp_server' value='192.168.0.57'></div>"}*//*RFI JSon{	'Nombre': 'ftp_user',	'Tipo' : 'ConfigDynamic',	'title': 'FTP Server user',	"InnerHTML":"<div><label>FTP Server user:</label><input type='text' required name='ftp_user' value='anonymous'></div>"}*//*RFI JSon{	'Nombre': 'ftp_pass',	'Tipo' : 'ConfigDynamic',	'title': 'FTP Server pass',	"InnerHTML":"<div><label>FTP Server pass:</label><input type='password' required name='ftp_pass' value=''></div>"}*//*** @fn void ftpUploadImage(void);* @alias UploadImage* @brief Change the state of the led, 1-on, 0-off, 2-toggle* @return Nothing*/EMIC:setOutput(target.ino)
+	EMIC:copy(inc/ftp.h > TARGET:inc/ftp.h)
+	EMIC:define(includes_target.ftp,ftp)
+EMIC:restoreOutput
+EMIC:setOutput(src.c)
+	EMIC:copy(src/ftp.c > TARGET:src/ftp.c.h)
+	EMIC:define(includes_src.ftp.c,ftp.c
+)EMIC:restoreOutput

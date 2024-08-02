@@ -1,2 +1,1 @@
-# script.py
-print("Hola, Mundo desde script.py")
+# script.pyprint("Hola, Mundo desde script.py")
