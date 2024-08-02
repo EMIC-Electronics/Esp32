@@ -1,40 +1,32 @@
-<<<<<<< HEAD
-// Archivo Fuente Principal: Aqui empezara a generar el fuente
+EMIC:setInput(DEV:_hal/.{UC_FAMILY}./system/init.emic)
 
-=======
->>>>>>> 2f279fd76599a4d6bd29a26d8292313d97fca4d0
-#include "userFncFile.h"  //No RFI scan
-#include "inc/userVars.h"  //No RFI scan
-#include "src.c.h"  //No RFI scan
-#include "userFncFile.c.h"  //No RFI scan
+//--------- includes_target ---------------------------------
+#include "inc/.{includes_target.*}..h"
 
-#newRFIcode(_hal/.{UC_FAMILY}./system/init.emic)
+//--------- includes in main.c ---------------------------------
+#include "inc/userFncFile.h"
+#include "inc/userVars.h"
+#include "userFncFile.c.h"
 
+//--------- includes_src ---------------------------------
+#include "src/.{includes_src.*}..c.h"
 
-
-void setup() {
-  
-<<<<<<< HEAD
-  // initialize digital pin LED_BUILTIN as an output.
-  //pinMode(LED_BUILTIN, OUTPUT);
-=======
-	#ifdef event_preInit_active
-	preInit();
-	#endif
->>>>>>> 2f279fd76599a4d6bd29a26d8292313d97fca4d0
-
+//--------- code in main.c ---------------------------------
+void setup()
+{
 	initSystem();
-	#newRFIcode(temp/EMICinits.c.h)
-	#ifdef event_onReset_active
+	EMIC:ifdef usedEvent.SystemConfig
+	SystemConfig();
+	EMIC:endif
+	.{inits.*}.();
+	EMIC:ifdef usedEvent.onReset
 	onReset();
-	#endif
+	EMIC:endif
 
 }
 
 // the loop function runs over and over again forever
-void loop() {
-
-
-  #newRFIcode(temp/EMICpolling.c.h)
-
+void loop()
+{
+	.{polls.*}.();
 }

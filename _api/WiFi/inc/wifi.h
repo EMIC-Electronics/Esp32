@@ -12,6 +12,4 @@ void initWiFi(void);
 
 void WiFi_connect();	//Connect method.
 
-#setFile temp/EMICinits.c
-	initWiFi();
-#unSetFile
+EMIC:define(inits.initWiFi,initWiFi)

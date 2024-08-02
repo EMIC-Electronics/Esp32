@@ -1,13 +1,7 @@
-#ifndef __streamOut_emic__
-#define __streamOut_emic__
-
-#setFile codigo.c
-    ##include(inc/streamOut.h)
-#unSetFile
-
-// #setFile src.c
-//     ##include(src/streamOut.c)
-// #unSetFile
-
-
-#endif
+EMIC:ifndef(__streamOut_emic__)
+EMIC:define(__streamOut_emic__)
+EMIC:setOutput(codigo.c)
+	EMIC:copy(inc/streamOut.h > TARGET:inc/streamOut.h)
+	EMIC:define(includes_codigo.streamOut,streamOut)
+EMIC:restoreOutput
+// #setFile src.c//     ##include(src/streamOut.c)// #unSetFileEMIC:endif

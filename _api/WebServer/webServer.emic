@@ -1,5 +1,3 @@
-#ifndef __WEBSERVER_EMIC__
-#define __WEBSERVER_EMIC__
 //RFI TAG:driverName=HTTP Web Server
 
 /**
@@ -9,12 +7,9 @@
 * @return Nothing
 */
 
-#setFile target.ino
-	##include(inc/webServer.h)
-#unSetFile
+EMIC:copy(inc/webServer.h > TARGET:inc/webServer.h)
+EMIC:define(includes_target.webServer,webServer)
 
-#setFile src.c
-	##include(src/webServer.c|src/webServer.c.h)
-#unSetFile
+EMIC:copy(src/webServer.c > TARGET:src/webServer.c.h)
+EMIC:define(includes_src.webServer,webServer)
 
-#endif
