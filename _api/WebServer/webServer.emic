@@ -8,22 +8,6 @@
 */
 
 
-/*RFI JSon
-{
-	'Nombre': 'modelo',
-	'Tipo' : 'Configurator',
-	'subtype' : 'str',
-	'title': 'Power on Dynamometer',
-	"InnerHTML":"
-	<fieldset>
-		<legend>Seleccione modelo:</legend>
-		<div title='Modelo coco 2017'><input type='radio' required name='modelo' id='modelo_1' value='`http://modelo_coco`' checked ><label for='modelo_1'>Modelo coco 2017</label></input></div>
-		<div title='Reconocimiento de digitos OPENCV'><input type='radio' required name='modelo' id='modelo_2' value='`http://OPENCV`'><label for='modelo_2'>Modelo OPENCV</label></input></div>
-		<div title='Reconocimiento de digitos SSD-mobileNET'><input type='radio' required name='modelo' id='modelo_3' value='`http://SSD-mobileNET`'><label for='modelo_3'>Modelo SSD-mobileNET</label></input></div>
-	</fieldset>
-	"
-}
-*/
 
 EMIC:copy(inc/webServer.h > TARGET:inc/webServer.h)
 EMIC:define(includes_target.webServer,webServer)
