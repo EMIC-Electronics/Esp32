@@ -7,6 +7,15 @@
 * @return Nothing
 */
 
+/**
+* @fn void setupCamara(uint_32 frec,int quality);
+* @alias setup
+* @brief Take a photo from ESPCam.
+* @param frec inverso de la velocidad del opturador
+* @param quality calidad del jpg
+* @return Nothing
+*/
+
 EMIC:copy(inc/camara.h > TARGET:inc/camara.h)
 EMIC:define(includes_target.camara,camara)
 
