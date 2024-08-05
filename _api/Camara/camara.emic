@@ -16,6 +16,9 @@
 * @return Nothing
 */
 
+
+
+
 EMIC:copy(inc/camara.h > TARGET:inc/camara.h)
 EMIC:define(includes_target.camara,camara)
 
