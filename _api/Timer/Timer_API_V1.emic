@@ -22,9 +22,9 @@
 EMIC:setInput(DEV:_hal/.{UC_FAMILY}./_hard/Timer/timer.emic)
 
 
-EMIC:copy(inc/Timer_API_V1.h > TARGET:inc/Timer.{name}._API_V1.h,name=.{name}.)
+EMIC:copy(inc/Timer_API_V1.h > TARGET:src/inc/Timer.{name}._API_V1.h,name=.{name}.)
 EMIC:define(includes_target.Timer.{name}._API_V1,Timer.{name}._API_V1)
 
-EMIC:copy(src/Timer_API_V1.c > TARGET:src/Timer.{name}._API_V1.c.h,name=.{name}.)
+EMIC:copy(src/Timer_API_V1.c > TARGET:src/src/Timer.{name}._API_V1.c.h,name=.{name}.)
 EMIC:define(includes_src.Timer.{name}._API_V1,Timer.{name}._API_V1)
 

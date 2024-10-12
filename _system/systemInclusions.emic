@@ -1,9 +1,11 @@
-EMIC:setOutput(codigo.c)
-EMIC:setInput(inc\includesLibraries.h)
-	EMIC:copy(inc/conversionFunctions.h > TARGET:inc/conversionFunctions.h)
+
+EMIC:setOutput(codigo.c)
+EMIC:setInput(inc\includesLibraries.h)TARGET:src/inc/
+	EMIC:copy(inc/conversionFunctions.h > TARGET:src/inc/conversionFunctions.h)
 	EMIC:define(includes_codigo.conversionFunctions,conversionFunctions)
 EMIC:restoreOutput
-EMIC:setOutput(src.c)
-	EMIC:copy(src/conversionFunctions.c > TARGET:src/conversionFunctions.c)
+
+EMIC:setOutput(src.c)
+	EMIC:copy(src/conversionFunctions.c > TARGET:src/src/conversionFunctions.c)
 	EMIC:define(includes_src.conversionFunctions,conversionFunctions)
 EMIC:restoreOutput

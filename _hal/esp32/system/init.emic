@@ -1,6 +1,6 @@
-EMIC:copy(inc/init.h > TARGET:inc/init.h)
+EMIC:copy(inc/init.h > TARGET:src/inc/init.h)
 EMIC:define(includes_target.init,init)
 
-EMIC:copy(src/init.c > TARGET:src/init.c.h)
+EMIC:copy(src/init.c > TARGET:src/src/init.c.h)
 EMIC:define(includes_src.init,init)
 

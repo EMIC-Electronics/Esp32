@@ -7,8 +7,8 @@
 * @return Nothing
 */
 
-EMIC:copy(inc/wifi.h > TARGET:inc/wifi.h)
+EMIC:copy(inc/wifi.h > TARGET:src/inc/wifi.h)
 EMIC:define(includes_target.wifi,wifi)
 
-EMIC:copy(src/wifi.c > TARGET:src/wifi.c.h)
+EMIC:copy(src/wifi.c > TARGET:src/src/wifi.c.h)
 EMIC:define(includes_src.wifi,wifi)

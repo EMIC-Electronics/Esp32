@@ -29,12 +29,12 @@ EMIC:setInput(DEV:_hal/.{UC_FAMILY}./_hard/GPIO/gpio.emic)
 EMIC:setInput(DEV:_hal/.{UC_FAMILY}./_hard/Timer/timer.emic)
 
 EMIC:setOutput(target.ino)
-	EMIC:copy(inc/ledV2.h > TARGET:inc/ledV2.h)
+	EMIC:copy(inc/ledV2.h > TARGET:src/inc/ledV2.h)
 	EMIC:define(includes_target.ledV2,ledV2)
 EMIC:restoreOutput
 
 EMIC:setOutput(src.c)
-	EMIC:copy(src/ledV2.c > TARGET:src/ledV2.c.h)
+	EMIC:copy(src/ledV2.c > TARGET:src/src/ledV2.c.h)
 	EMIC:define(includes_src.ledV2.c,ledV2.c
 )EMIC:restoreOutput
 

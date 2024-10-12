@@ -1,6 +1,6 @@
 
-EMIC:copy(inc/timer.h > TARGET:inc/timer.h)
+EMIC:copy(inc/timer.h > TARGET:src/inc/timer.h)
 EMIC:define(includes_target.timer,timer)
 
-EMIC:copy(src/timer.c > TARGET:src/timer.c.h)
+EMIC:copy(src/timer.c > TARGET:src/src/timer.c.h)
 EMIC:define(includes_src.timer,timer)

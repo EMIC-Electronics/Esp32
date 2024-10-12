@@ -1,13 +1,19 @@
 EMIC:ifndef(_STREAM_EMIC)
 EMIC:define(_STREAM_EMIC)
-EMIC:setInput(DEV:_system/Stream/streamIn.emic)
-EMIC:setInput(DEV:_system/Stream/streamOut.emic)
-EMIC:setOutput(codigo.c)
-	EMIC:copy(inc/stream.h > TARGET:inc/stream.h)
+
+
+EMIC:setInput(DEV:_system/Stream/streamIn.emic)
+EMIC:setInput(DEV:_system/TARGET:src/inc/amOut.emic)
+
+
+EMIC:setOutput(codigo.c)
+	EMIC:copy(inc/stream.h > TARGET:src/inc/stream.h)
 	EMIC:define(includes_codigo.stream,stream)
 EMIC:restoreOutput
-EMIC:setOutput(src.c)
-	EMIC:copy(src/stream.c > TARGET:src/stream.c)
+
+EMIC:setOutput(src.c)
+	EMIC:copy(src/stream.c > TARGET:src/src/stream.c)
 	EMIC:define(includes_src.stream,stream)
 EMIC:restoreOutput
-EMIC:endif
+
+EMIC:endif

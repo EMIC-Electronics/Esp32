@@ -1,11 +1,15 @@
 EMIC:ifndef(__streamIn_emic__)
 EMIC:define(__streamIn_emic__)
-EMIC:setOutput(codigo.c)
+
+EMIC:setOutput(codigo.c)TARGET:src/inc/
 	EMIC:copy(inc/streamIn.h > TARGET:inc/streamIn.h)
 	EMIC:define(includes_codigo.streamIn,streamIn)
 EMIC:restoreOutput
-EMIC:setOutput(src.c)
-	EMIC:copy(src/streamIn.c > TARGET:src/streamIn.c)
+
+EMIC:setOutput(src.c)
+	EMIC:copy(src/streamIn.c > TARGET:src/src/streamIn.c)
 	EMIC:define(includes_src.streamIn,streamIn)
 EMIC:restoreOutput
-EMIC:endif
+
+
+EMIC:endif

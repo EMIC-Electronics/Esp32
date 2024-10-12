@@ -1,12 +1,14 @@
 EMIC:setInput(DEV:_hal/.{UC_FAMILY}./system/init.emic)
 
+#include "inc/main.h"
+
 //--------- includes_target ---------------------------------
 #include "inc/.{includes_target.*}..h"
 
 //--------- includes in main.c ---------------------------------
 #include "inc/userFncFile.h"
-#include "inc/userVars.h"
-#include "userFncFile.c.h"
+//#include "inc/userVars.h"
+#include "src/userFncFile.c.h"
 
 //--------- includes_src ---------------------------------
 #include "src/.{includes_src.*}..c.h"

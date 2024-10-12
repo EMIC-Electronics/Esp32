@@ -14,6 +14,4 @@
 * @return Nothing
 */
 
-EMIC:setOutput(target.ino)
-EMIC:setInput(main.c)
-EMIC:restoreOutput
+EMIC:copy(main.c > src/main.cpp)

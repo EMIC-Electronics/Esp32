@@ -1,4 +1,4 @@
-EMIC:setOutput(target.ino)
+EMIC:setOutput(TARGET:src/inc/main.h)
 
 //------- includes en generate.emic ------------------------
 #include "esp_camera.h"
@@ -6,8 +6,12 @@ EMIC:setOutput(target.ino)
 #include "soc/rtc_cntl_reg.h"  // Disable brownour problems
 #include "driver/rtc_io.h"
 #include "time.h"
+
 // -- variables globales -----
 camera_config_t config;
+
+
+EMIC:restoreOutput
 
 EMIC:define(UC_FAMILY,esp32)
 
@@ -17,6 +21,7 @@ EMIC:setInput(DEV:_pcb\pcb.emic,pcb=esp32_cam.pcb)
 //------------------- Process generate files ----------------
 EMIC:setInput(SYS:usedFunction.emic)
 EMIC:setInput(SYS:usedEvent.emic)
+EMIC:setInput(SYS:config.emic)
 
 
 ////------------- Driver Config -----------------------
@@ -31,7 +36,8 @@ EMIC:setInput(DEV:_api/Camara/camara.emic)
 EMIC:setInput(DEV:_main/esp32/arduino/main.emic)
 
 //------------------- Copy generate files ----------------
-EMIC:copy(SYS:inc/userFncFile.h > TARGET:inc/userFncFile.h)
-EMIC:copy(SYS:userFncFile.c >TARGET:userFncFile.c.h)
+EMIC:copy(SYS:inc/myId.h > TARGET:src/inc/myId.h)
+EMIC:copy(SYS:inc/userVars.h > TARGET:src/inc/userVars.h)
+EMIC:copy(SYS:inc/userFncFile.h > TARGET:src/inc/userFncFile.h)
+EMIC:copy(SYS:userFncFile.c > TARGET:src/src/userFncFile.c.h)
 
-EMIC:restoreOutput
