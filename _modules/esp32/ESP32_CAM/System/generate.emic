@@ -39,5 +39,5 @@ EMIC:setInput(DEV:_main/esp32/arduino/main.emic)
 EMIC:copy(SYS:inc/myId.h > TARGET:src/inc/myId.h)
 EMIC:copy(SYS:inc/userVars.h > TARGET:src/inc/userVars.h)
 EMIC:copy(SYS:inc/userFncFile.h > TARGET:src/inc/userFncFile.h)
-EMIC:copy(SYS:userFncFile.c > TARGET:src/src/userFncFile.c.h)
+EMIC:copy(SYS:userFncFile.c > TARGET:src/src/userFncFile.c.h) 
 
