@@ -2,7 +2,7 @@
 ## Una iniciativa para compartir experiencias y mejorar la productividad de programadores de sistemas embebidos.
 
 ### ¿Que es EMIC?
-
+ 
 EMIC significa Electrónica Modular Inteligente Colaborativa. Está compuesto por: un conjunto de funciones y drivers, un editor de script simple e intuitivo que junto con un sistema de integración, puede crear código listo para compilar o ejecutar.
 
 En un principio EMIC fué creado para crear programas en lenguaje C, pero en el último tiempo se puso a prueba en desarrollo de paginas web (HTML, CSS y JS). Con muy buenos resultados.
